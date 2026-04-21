@@ -1,0 +1,158 @@
+backend:
+  name: github
+  repo: GITHUB_REPO_PLACEHOLDER
+  branch: main
+
+# Local development: run `npx decap-server` and uncomment below
+# local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # ── Site-wide settings ──────────────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Site Settings"
+        file: "src/content/site.json"
+        fields:
+          - { label: "Business Name", name: "businessName", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Phone (display)", name: "phone", widget: "string", hint: "e.g. (02) 6552 6131" }
+          - { label: "Phone (tel link)", name: "phoneTel", widget: "string", hint: "Digits only, e.g. 0265526131" }
+          - { label: "Address (full)", name: "address", widget: "string" }
+          - { label: "Address Street", name: "addressStreet", widget: "string" }
+          - { label: "Address City/State/Post", name: "addressCity", widget: "string" }
+          - { label: "Hours Summary", name: "hours", widget: "string" }
+          - { label: "Hours Weekday", name: "hoursWeekday", widget: "string" }
+          - { label: "Hours Saturday", name: "hoursSaturday", widget: "string" }
+          - { label: "Hours Sunday", name: "hoursSunday", widget: "string" }
+          - { label: "ABN", name: "abn", widget: "string", required: false }
+          - { label: "Facebook URL", name: "facebook", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "Google Maps URL", name: "googleMapsUrl", widget: "string" }
+          - { label: "Footer Tagline", name: "footerTagline", widget: "string" }
+
+  # ── Home page ───────────────────────────────────────────────────────────────
+  - name: "home"
+    label: "Home Page"
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "src/content/home.json"
+        fields:
+          # Hero
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Headline Line 1", name: "headlineLine1", widget: "string" }
+              - { label: "Headline Emphasis", name: "headlineEmphasis", widget: "string", hint: "Shown in red" }
+              - { label: "Headline Line 2", name: "headlineLine2", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }
+              - label: "Trust Badges"
+                name: "badges"
+                widget: "list"
+                field: { label: "Badge", name: "badge", widget: "string" }
+
+          # Stats
+          - label: "Stats Bar"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+          # Why Us
+          - label: "Why Us"
+            name: "whyUs"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }
+              - label: "Points"
+                name: "points"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+
+          # How It Works
+          - label: "How It Works"
+            name: "howItWorks"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Step Number", name: "number", widget: "string", hint: "e.g. 01" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+
+          # Testimonials
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }
+              - label: "Reviews"
+                name: "reviews"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Location", name: "location", widget: "string" }
+                  - { label: "Vehicle", name: "vehicle", widget: "string" }
+                  - { label: "Stars (1–5)", name: "stars", widget: "number", value_type: "int", min: 1, max: 5 }
+                  - { label: "Review Text", name: "text", widget: "text" }
+
+  # ── About page ──────────────────────────────────────────────────────────────
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "src/content/about.json"
+        fields:
+          # Hero
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }
+
+          # Story
+          - label: "Our Story"
+            name: "story"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+          # Values
+          - label: "Values"
+            name: "values"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Emoji", name: "emoji", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }

@@ -1,0 +1,260 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import BookingCTA from '../components/BookingCTA.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+
+const services = [
+  {
+    id: "logbook",
+    name: "Logbook Servicing",
+    emoji: "📋",
+    summary: "Keep your new car warranty intact with manufacturer-approved logbook servicing.",
+    body: `When you buy a new car, the manufacturer requires it to be serviced according to their schedule — with the right parts, the right fluids, and the work recorded in your logbook. Miss a service or use the wrong oil, and your warranty can be voided.
+
+At Corney's, we service your vehicle exactly to manufacturer specifications. We use quality parts and fluids that meet or exceed OEM standards, and we stamp your logbook after every service. You keep your warranty, and your car gets the care it was designed to receive.
+
+Whether you're driving a Toyota, Hyundai, Ford, Mazda, or anything else — bring it to us and we'll look after it properly.`,
+    cta: "Book a Logbook Service"
+  },
+  {
+    id: "general",
+    name: "General Servicing & Repairs",
+    emoji: "🔧",
+    summary: "Oil changes, filters, belts, hoses — keeping your car running reliably between major services.",
+    body: `Regular maintenance is what keeps cars out of the workshop for expensive repairs. A simple oil and filter change at the right interval prevents engine wear. New spark plugs keep fuel economy up. A fresh air filter means your engine breathes properly.
+
+We handle all routine servicing for all makes and models — whether it's a basic service or a more involved repair job. We'll always tell you what's genuinely due and what can wait, so you're never spending money you don't need to.
+
+If something unexpected comes up during the service, we call before we do anything. No surprises.`,
+    cta: "Book a Service"
+  },
+  {
+    id: "brakes",
+    name: "Brakes",
+    emoji: "⛔",
+    summary: "Brake pads, rotors, callipers, and fluid — we won't let you leave on unsafe brakes.",
+    body: `Your brakes are the most critical safety system on your vehicle. When they need attention, they don't always wait until it's convenient.
+
+Common brake warning signs: squealing or grinding when braking, pulling to one side, a spongy or soft pedal, or the brake warning light on your dash. If you notice any of these, book in now — don't wait.
+
+We inspect, repair, and replace brake pads, rotors, brake callipers, brake lines, and brake fluid. We'll tell you exactly what's needed, show you the worn parts if you want to see them, and have you back on the road with full confidence in your brakes.`,
+    cta: "Book a Brake Check"
+  },
+  {
+    id: "suspension",
+    name: "Suspension & Steering",
+    emoji: "🚗",
+    summary: "Shocks, struts, ball joints, and wheel alignments — if it affects how your car handles, we fix it.",
+    body: `A worn suspension doesn't just make for an uncomfortable ride — it affects your car's handling, tyre wear, and ability to brake in an emergency. Worn ball joints, broken springs, or tired shock absorbers can make a vehicle genuinely unsafe.
+
+Signs you might need suspension or steering work: your car bounces excessively after a bump, you feel every pothole through the steering wheel, your tyres are wearing unevenly, or the car pulls to one side.
+
+We inspect and replace shock absorbers, struts, ball joints, tie rod ends, CV joints, and steering components. We also perform wheel alignments to ensure your tyres are running true and your handling is spot-on.`,
+    cta: "Book a Suspension Check"
+  },
+  {
+    id: "aircon",
+    name: "Air Conditioning",
+    emoji: "❄️",
+    summary: "AC regas, repairs, and full service — stay cool on those long Taree summers.",
+    body: `Australian summers are no joke — and a car aircon that's not working properly makes every trip miserable. Whether your system has slowly stopped cooling over the years or packed it in completely, we can fix it.
+
+Common AC issues we handle: the system not blowing cold, weak airflow, unpleasant smells from the vents, or AC compressor failure. We regas systems that have lost refrigerant, repair leaks, and replace components that have failed.
+
+We also service AC systems as part of regular maintenance — keeping the system in good shape means it lasts longer and works better when you need it most.`,
+    cta: "Book an AC Service"
+  },
+  {
+    id: "electrical",
+    name: "Batteries & Electrical",
+    emoji: "⚡",
+    summary: "Battery testing, replacement, and electrical fault diagnosis for all vehicles.",
+    body: `Modern vehicles are heavily dependent on their electrical systems — and when something goes wrong, it's not always obvious what the cause is.
+
+We handle everything from straightforward battery replacements through to tracking down intermittent electrical faults that have been driving you mad for months. Our diagnostic equipment lets us read your car's control systems to pinpoint exactly where the fault is — rather than just guessing and replacing parts.
+
+If your battery is flat, your alternator isn't charging, a sensor has failed, or there's a short somewhere in the system — bring it to us and we'll sort it.`,
+    cta: "Book an Electrical Check"
+  },
+  {
+    id: "cooling",
+    name: "Cooling Systems",
+    emoji: "🌡️",
+    summary: "Radiator flushes, coolant leaks, thermostat replacement — keep your engine running at the right temperature.",
+    body: `Your car's cooling system is what prevents the engine from overheating. A small coolant leak or a failing thermostat can quickly turn into a very expensive engine repair if it's not caught early.
+
+Signs of cooling system problems: your temperature gauge is running higher than usual, you can smell coolant, there's steam from under the bonnet, or you're regularly topping up the coolant.
+
+We service and repair radiators, coolant hoses, water pumps, thermostats, and cooling fans. We'll perform a cooling system flush and refill if it's been a while — old coolant becomes acidic and can corrode your system from the inside out.`,
+    cta: "Book a Cooling System Check"
+  },
+  {
+    id: "diagnostics",
+    name: "Diagnostics",
+    emoji: "🔍",
+    summary: "Modern scan tools to identify exactly what's wrong — no guesswork, no unnecessary parts.",
+    body: `When your check engine light comes on — or any other warning light — it means your car's computer has logged a fault code. The right diagnostic equipment reads that code and points us to the exact system that's triggered the warning.
+
+Without proper diagnostics, mechanics are guessing. With it, we can tell you exactly what's wrong, what caused it, and what needs to be done to fix it. That means less time in the workshop and less money spent on parts you don't need.
+
+We use professional-grade scan tools that cover all makes and models, including European vehicles. Whether it's an engine management issue, a transmission fault, or an ABS/traction control warning — we can read it and fix it.`,
+    cta: "Book a Diagnostic Check"
+  },
+  {
+    id: "pinkslips",
+    name: "Pink Slips (Roadworthy Inspections)",
+    emoji: "📝",
+    summary: "Annual safety inspection required for NSW rego renewal. Fast, thorough, and done right.",
+    body: `A Pink Slip (also called a Safety Check or eS certificate) is required in NSW each year when renewing registration on vehicles more than 5 years old. It confirms your vehicle meets the minimum safety requirements to be on the road.
+
+The inspection covers brakes, tyres, steering, suspension, lights, windscreen, seat belts, and more. If your vehicle passes, we issue the eS certificate electronically and you can renew your rego immediately.
+
+If something doesn't pass, we'll explain exactly what needs to be fixed, give you a quote to fix it, and re-inspect once it's repaired. We won't fail you on something trivial — but we won't pass something that's genuinely unsafe either.`,
+    cta: "Book a Pink Slip"
+  },
+  {
+    id: "blueslips",
+    name: "Blue Slips (AUVIS Inspection)",
+    emoji: "🔵",
+    summary: "Authorised AUVIS inspection station for unregistered vehicles, interstate transfers, and lapsed rego.",
+    body: `A Blue Slip is required in NSW when you want to register a vehicle that isn't currently registered — including vehicles that have never been registered in NSW, vehicles coming from interstate, or vehicles that have had their rego lapse.
+
+Unlike a Pink Slip (which is just a safety check for annual rego renewal), a Blue Slip is a more comprehensive AUVIS (Authorised Unregistered Vehicle Inspection Scheme) inspection. It verifies that the vehicle is safe, meets NSW standards, and that its identity is correct (VIN, compliance plates, and so on).
+
+Corney's is an authorised AUVIS inspection station. Once we issue the Blue Slip, you can proceed with registration at Service NSW. If you're not sure whether you need a pink slip or a blue slip, just give us a call — we'll point you in the right direction.`,
+    cta: "Book a Blue Slip",
+    highlight: true
+  },
+  {
+    id: "defects",
+    name: "Defect Clearances",
+    emoji: "✅",
+    summary: "Received an RMS or police defect notice? We fix the issue and issue the clearance so you can get back on the road.",
+    body: `If your vehicle has been issued a defect notice by police or the NSW Roads and Maritime Services (RMS), the vehicle can't be driven on public roads until the defects are repaired and a clearance is issued by an authorised repairer.
+
+Many people don't realise their regular mechanic can issue these clearances — but Corney's can. We assess the defects listed on your notice, carry out the required repairs, inspect the vehicle, and issue the clearance certificate.
+
+Common defects we clear: unroadworthy tyres, brake issues, lighting faults, exhaust problems, and suspension issues. If you've received a defect notice, call us straightaway — we'll get you sorted quickly so you're back on the road legally.`,
+    cta: "Book a Defect Clearance",
+    highlight: true
+  },
+  {
+    id: "prepurchase",
+    name: "Pre-Purchase Inspections",
+    emoji: "🔎",
+    summary: "Buying a used car? Let us check it over before you sign anything — it could save you thousands.",
+    body: `Buying a used car is one of the biggest purchases most people make — and the risks are real. Hidden rust, accident damage, worn mechanicals, or a flood-affected vehicle can turn a bargain into a money pit very quickly.
+
+A pre-purchase inspection by an independent mechanic is the best $100–$200 you can spend. We'll look over the car thoroughly — checking for rust, oil leaks, tyre condition, brake wear, suspension play, signs of previous accident damage, and anything else that's out of the ordinary.
+
+At the end of the inspection, we'll give you a plain-English report on the car's condition, anything we'd fix before buying, and a rough estimate of what those repairs would cost. You go into the negotiation — or walk away — with full information.`,
+    cta: "Book a Pre-Purchase Inspection"
+  },
+  {
+    id: "fleet",
+    name: "4WD & Fleet Vehicles",
+    emoji: "🚙",
+    summary: "From utes and 4WDs to small business fleets — keeping your work vehicles on the road.",
+    body: `Mid North Coast NSW is 4WD country. Whether you're running a trade ute, a family 4WD, or a small fleet of work vehicles, keeping them serviced and reliable is non-negotiable.
+
+We service and repair all 4WD and light commercial vehicles — including utes, vans, and SUVs from Toyota, Ford, Mitsubishi, Nissan, Isuzu, and more. We understand that downtime is money for a business, so we work to get your vehicles back to you as quickly as possible.
+
+Fleet servicing: if you run multiple vehicles and want a single point of contact for your servicing needs, talk to us about a fleet arrangement. We'll work out a servicing schedule that keeps your vehicles on the road and your costs predictable.`,
+    cta: "Book Fleet Servicing"
+  }
+];
+---
+
+<Layout
+  title="Our Services — Corney's Automotive Services Taree"
+  description="Full list of services at Corney's Automotive in Taree NSW: logbook servicing, brakes, air con, pink slips, blue slips (AUVIS), defect clearances, pre-purchase inspections and more. Call (02) 6552 6131."
+  canonical="/services/"
+>
+  <Header currentPage="/services/" />
+  <main>
+
+    <!-- Page hero -->
+    <section class="bg-[#1A1A1A] py-14 relative overflow-hidden" aria-label="Services page header">
+      <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#E31E24]"></div>
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
+        <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+        <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white mb-4">Our Services</h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Everything your car needs, under one roof in Taree. All makes and models, all types of vehicles.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="tel:0265526131" class="inline-flex items-center justify-center gap-2 bg-[#E31E24] text-white font-bold px-6 py-3 rounded-lg hover:bg-red-700 transition-colors">
+            📞 (02) 6552 6131
+          </a>
+          <a href="/contact/" class="inline-flex items-center justify-center gap-2 border border-gray-500 text-gray-200 px-6 py-3 rounded-lg hover:border-white hover:text-white transition-colors font-semibold">
+            Book a Service
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services list -->
+    <section class="py-14 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+        {services.map((service) => (
+          <div
+            id={service.id}
+            class={`reveal scroll-mt-24 rounded-2xl border p-6 sm:p-8 ${
+              service.highlight ? 'border-[#E31E24]/40 bg-red-50' : 'border-gray-200 bg-white'
+            }`}
+          >
+            <div class="flex items-start gap-4 mb-4">
+              <span class="text-3xl shrink-0">{service.emoji}</span>
+              <div>
+                <h2 class="font-display text-xl sm:text-2xl font-bold text-[#1A1A1A]">
+                  {service.name}
+                  {service.highlight && (
+                    <span class="ml-3 text-xs font-bold text-[#E31E24] uppercase tracking-wide bg-red-100 px-2 py-0.5 rounded-full">
+                      NSW Authorised
+                    </span>
+                  )}
+                </h2>
+                <p class="text-[#E31E24] font-medium text-sm mt-1">{service.summary}</p>
+              </div>
+            </div>
+
+            <div class="prose prose-gray max-w-none text-gray-600 text-sm sm:text-base leading-relaxed space-y-3">
+              {service.body.trim().split('\n\n').map((para) => (
+                <p>{para.trim()}</p>
+              ))}
+            </div>
+
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a
+                href="/contact/"
+                class="inline-flex items-center gap-2 bg-[#E31E24] hover:bg-red-700 text-white font-semibold px-5 py-3 rounded-lg transition-colors text-sm"
+              >
+                {service.cta}
+              </a>
+              <a
+                href="tel:0265526131"
+                class="inline-flex items-center gap-2 border border-gray-300 text-gray-700 hover:border-[#E31E24] hover:text-[#E31E24] font-semibold px-5 py-3 rounded-lg transition-colors text-sm"
+              >
+                📞 Call Us
+              </a>
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </section>
+
+    <BookingCTA
+      heading="Can't Find What You're Looking For?"
+      subtext="Give us a call — if it's mechanical, we probably do it. (02) 6552 6131"
+    />
+
+  </main>
+  <Footer />
+  <WhatsAppButton />
+  <MobileCTABar />
+</Layout>

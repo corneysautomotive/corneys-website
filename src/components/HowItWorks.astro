@@ -1,0 +1,74 @@
+---
+// How It Works — 3-step process to reduce booking anxiety
+import homeContent from '../content/home.json';
+import siteContent from '../content/site.json';
+
+const howItWorks = homeContent.howItWorks;
+
+const stepIcons = [
+  `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
+  `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+  `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+];
+---
+
+<section class="py-16 lg:py-24 bg-[#1A1A1A] relative overflow-hidden" aria-label="How it works">
+  <!-- Background subtle grid -->
+  <div class="absolute inset-0 opacity-[0.025]" style="background-image: linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="text-center mb-14 reveal">
+      <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-2">{howItWorks.tagline}</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+        {howItWorks.heading}
+      </h2>
+      <span class="accent-line mx-auto"></span>
+      <p class="mt-4 text-gray-400 text-lg max-w-xl mx-auto">
+        {howItWorks.subtext}
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+
+      <!-- Connector lines (desktop only) -->
+      <div class="hidden md:block absolute top-12 left-1/3 right-1/3 h-px bg-gradient-to-r from-[#E31E24]/40 via-[#E31E24]/60 to-[#E31E24]/40 z-0 pointer-events-none"></div>
+
+      {howItWorks.steps.map((step, i) => (
+        <div class="how-step reveal relative z-10 flex flex-col items-center text-center">
+          <!-- Step number + icon container -->
+          <div class="relative mb-6">
+            <!-- Outer ring -->
+            <div class="w-24 h-24 rounded-full border-2 border-[#E31E24]/30 flex items-center justify-center bg-[#1E1E1E] shadow-lg">
+              <!-- Icon -->
+              <div class="text-[#E31E24]" set:html={stepIcons[i]} />
+            </div>
+            <!-- Step number badge -->
+            <span class="absolute -top-2 -right-2 w-8 h-8 bg-[#E31E24] text-white text-xs font-bold rounded-full flex items-center justify-center font-display shadow-md">
+              {step.number}
+            </span>
+          </div>
+
+          <h3 class="font-display font-bold text-white text-xl mb-3">{step.title}</h3>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-xs">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA below steps -->
+    <div class="text-center mt-12 reveal">
+      <a
+        href={`tel:${siteContent.phoneTel}`}
+        class="inline-flex items-center gap-2 bg-[#E31E24] hover:bg-red-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all hover:scale-105 hover:shadow-[0_0_24px_rgba(227,30,36,0.35)]"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+        </svg>
+        Book Now — {siteContent.phone}
+      </a>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,19 @@
+{
+  "name": "corneys-website",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^10.0.5",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^5.6.0",
+    "gsap": "^3.12.5",
+    "tailwindcss": "^4.1.4",
+    "vite": "^8.0.8"
+  }
+}

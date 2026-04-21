@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import StatsBar from '../components/StatsBar.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhyUs from '../components/WhyUs.astro';
+import Testimonials from '../components/Testimonials.astro';
+import BookingCTA from '../components/BookingCTA.astro';
+import Location from '../components/Location.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+---
+
+<Layout
+  title="Corney's Automotive Services — Trusted Mechanic in Taree NSW"
+  description="Corney's Automotive Services in Taree NSW. Logbook servicing, brakes, air conditioning, pink slips, blue slips, defect clearances and more. Call (02) 6552 6131."
+  canonical="/"
+>
+  <Header currentPage="/" />
+  <main>
+    <Hero />
+    <StatsBar />
+
+    <!-- Services — front and centre after hero -->
+    <ServicesGrid
+      title="Everything Your Car Needs"
+      subtitle="Logbook services to pink slips, blue slips to diagnostics — all under one roof in Taree."
+    />
+
+    <HowItWorks />
+
+    <WhyUs />
+
+    <Testimonials />
+
+    <BookingCTA
+      heading="Ready to Book Your Service?"
+      subtext="Give us a call or send us a message. We'll sort you out — no fuss, no waiting."
+    />
+
+    <Location />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+  <MobileCTABar />
+</Layout>

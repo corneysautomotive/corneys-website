@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import BookingCTA from '../components/BookingCTA.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+import aboutContent from '../content/about.json';
+import siteContent from '../content/site.json';
+
+const { hero, story, values } = aboutContent;
+---
+
+<Layout
+  title="About Us — Corney's Automotive Services Taree"
+  description="Corney's Automotive Services is a family-owned mechanic in Taree NSW. Trusted by local families for quality, honest automotive repairs and servicing. Call (02) 6552 6131."
+  canonical="/about/"
+>
+  <Header currentPage="/about/" />
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-[#1A1A1A] py-14 relative overflow-hidden" aria-label="About page header">
+      <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#E31E24]"></div>
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
+        <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-3">{hero.tagline}</p>
+        <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white mb-4">{hero.heading}</h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          {hero.subtext}
+        </p>
+      </div>
+    </section>
+
+    <!-- About body -->
+    <section class="py-16 lg:py-24 bg-white" aria-label="Our story">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+
+          <!-- Logo / visual -->
+          <div class="lg:col-span-2 reveal">
+            <div class="rounded-2xl overflow-hidden bg-[#1A1A1A] p-8 flex items-center justify-center">
+              <img
+                src="/logos/Corneys Automotive Services Alt Colour on Black.jpg"
+                alt="Corney's Automotive Services logo"
+                width="360"
+                height="140"
+                class="w-full max-w-sm object-contain" style="mix-blend-mode:screen"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Credentials strip -->
+            <div class="mt-6 space-y-3">
+              <div class="flex items-center gap-3 text-sm text-gray-700">
+                <span class="w-6 h-6 rounded-full bg-[#E31E24] text-white flex items-center justify-center text-xs font-bold">✓</span>
+                <span>Licensed Motor Vehicle Repairer (NSW)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-700">
+                <span class="w-6 h-6 rounded-full bg-[#E31E24] text-white flex items-center justify-center text-xs font-bold">✓</span>
+                <span>Authorised Pink Slip Inspector</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-700">
+                <span class="w-6 h-6 rounded-full bg-[#E31E24] text-white flex items-center justify-center text-xs font-bold">✓</span>
+                <span>AUVIS Authorised Station (Blue Slips)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-700">
+                <span class="w-6 h-6 rounded-full bg-[#E31E24] text-white flex items-center justify-center text-xs font-bold">✓</span>
+                <span>Authorised Defect Clearance Repairer</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-700">
+                <span class="w-6 h-6 rounded-full bg-[#E31E24] text-white flex items-center justify-center text-xs font-bold">✓</span>
+                <span>Fully insured</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story text -->
+          <div class="lg:col-span-3 space-y-5 reveal text-gray-600 text-base leading-relaxed">
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#1A1A1A]">
+              {story.heading}
+            </h2>
+            <span class="accent-line"></span>
+
+            {story.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+
+            <div class="pt-4">
+              <a
+                href="/contact/"
+                class="inline-flex items-center gap-2 bg-[#E31E24] hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              >
+                Book a Service
+              </a>
+              <a
+                href={`tel:${siteContent.phoneTel}`}
+                class="inline-flex items-center gap-2 text-[#1A1A1A] hover:text-[#E31E24] font-semibold px-6 py-3 transition-colors"
+              >
+                📞 {siteContent.phone}
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Values section -->
+    <section class="py-14 bg-[#F5F5F5]" aria-label="Our values">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 reveal">
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#1A1A1A]">{values.heading}</h2>
+          <span class="accent-line mx-auto"></span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {values.items.map((item) => (
+            <div class="reveal bg-white rounded-xl p-6 border border-gray-100">
+              <div class="text-3xl mb-3">{item.emoji}</div>
+              <h3 class="font-semibold text-[#1A1A1A] mb-2">{item.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <BookingCTA
+      heading="Come and See Us"
+      subtext="We're at 16 Albert Lane, Taree. Mon–Fri 8:30am–4:30pm, Sat 8:30am–11am. No appointment always necessary for a quick question — just give us a call."
+    />
+
+  </main>
+  <Footer />
+  <WhatsAppButton />
+  <MobileCTABar />
+</Layout>

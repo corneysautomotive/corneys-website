@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #E31E24;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-grey: #2C2C2C;
+  --color-brand-light: #F5F5F5;
+  --color-brand-silver: #9CA3AF;
+
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-display: 'Sora', 'Inter', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: #fff;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility: red underline accent */
+.accent-line {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background-color: #E31E24;
+  margin-top: 0.75rem;
+}
+
+/* Scroll reveal — initial hidden state (GSAP takes over) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* Phone link pulse on mobile */
+@media (max-width: 768px) {
+  .phone-pulse {
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.4); }
+    60% { box-shadow: 0 0 0 10px rgba(227, 30, 36, 0); }
+  }
+}
+
+/* Button press micro-interaction */
+a[href^="tel"],
+a[href="/contact/"] {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+a[href^="tel"]:active,
+a[href="/contact/"]:active {
+  transform: scale(0.97);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Image loading improvement */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Stats bar item entrance */
+.stats-item {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: statsFadeIn 0.6s ease forwards;
+}
+.stats-item:nth-child(1) { animation-delay: 0.1s; }
+.stats-item:nth-child(2) { animation-delay: 0.2s; }
+.stats-item:nth-child(3) { animation-delay: 0.3s; }
+.stats-item:nth-child(4) { animation-delay: 0.4s; }
+.stats-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes statsFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #E31E24;
+  outline-offset: 3px;
+}
+
+/* Selection colour — brand */
+::selection {
+  background: rgba(227, 30, 36, 0.2);
+  color: inherit;
+}

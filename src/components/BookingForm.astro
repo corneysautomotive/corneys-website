@@ -1,0 +1,206 @@
+---
+// BookingForm.astro — Booking request form
+// Submits to OpenClaw webhook → Ace → Telegram approval → Email confirmation
+---
+
+<section id="booking" class="bg-white py-16 lg:py-24">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-12">
+      <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-3">Book Online</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] mb-4">
+        Request a Booking
+      </h2>
+      <p class="text-gray-500 text-lg max-w-xl mx-auto">
+        Fill in your details and we'll confirm your booking via email as soon as possible.
+      </p>
+    </div>
+
+    <!-- Success message (hidden by default) -->
+    <div id="booking-success" class="hidden bg-green-50 border border-green-200 rounded-xl p-6 text-center mb-8">
+      <div class="text-green-600 text-4xl mb-3">✓</div>
+      <h3 class="font-bold text-green-800 text-xl mb-2">Booking Request Received!</h3>
+      <p class="text-green-700">We'll review your request and send a confirmation shortly.</p>
+    </div>
+
+    <!-- Error message (hidden by default) -->
+    <div id="booking-error" class="hidden bg-red-50 border border-red-200 rounded-xl p-6 text-center mb-8">
+      <h3 class="font-bold text-red-800 text-xl mb-2">Something went wrong</h3>
+      <p class="text-red-700">Please call us directly on <a href="tel:0265526131" class="font-bold underline">(02) 6552 6131</a> to book your service.</p>
+    </div>
+
+    <form id="booking-form" class="space-y-6">
+
+      <!-- Personal Details -->
+      <div class="bg-gray-50 rounded-xl p-6 space-y-4">
+        <h3 class="font-bold text-[#1A1A1A] text-lg border-b border-gray-200 pb-3">Your Details</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-gray-700 mb-1">Full Name <span class="text-[#E31E24]">*</span></label>
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900"
+              placeholder="John Smith" />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1">Phone Number <span class="text-[#E31E24]">*</span></label>
+            <input type="tel" id="phone" name="phone" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900"
+              placeholder="0400 000 000" />
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email Address <span class="text-[#E31E24]">*</span></label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900"
+            placeholder="john@example.com" />
+        </div>
+
+        <input type="hidden" name="confirmation_preference" value="email" />
+      </div>
+
+      <!-- Vehicle Details -->
+      <div class="bg-gray-50 rounded-xl p-6 space-y-4">
+        <h3 class="font-bold text-[#1A1A1A] text-lg border-b border-gray-200 pb-3">Vehicle Details</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="vehicle_make" class="block text-sm font-semibold text-gray-700 mb-1">Make <span class="text-[#E31E24]">*</span></label>
+            <input type="text" id="vehicle_make" name="vehicle_make" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900"
+              placeholder="Toyota" />
+          </div>
+          <div>
+            <label for="vehicle_model" class="block text-sm font-semibold text-gray-700 mb-1">Model <span class="text-[#E31E24]">*</span></label>
+            <input type="text" id="vehicle_model" name="vehicle_model" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900"
+              placeholder="Corolla" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="rego" class="block text-sm font-semibold text-gray-700 mb-1">Registration Number <span class="text-[#E31E24]">*</span></label>
+            <input type="text" id="rego" name="rego" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900"
+              placeholder="ABC123" style="text-transform:uppercase" />
+          </div>
+          <div>
+            <label for="rego_state" class="block text-sm font-semibold text-gray-700 mb-1">State <span class="text-[#E31E24]">*</span></label>
+            <select id="rego_state" name="rego_state" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900 bg-white">
+              <option value="">Select state</option>
+              <option value="NSW" selected>NSW</option>
+              <option value="VIC">VIC</option>
+              <option value="QLD">QLD</option>
+              <option value="WA">WA</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="ACT">ACT</option>
+              <option value="NT">NT</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Details -->
+      <div class="bg-gray-50 rounded-xl p-6 space-y-4">
+        <h3 class="font-bold text-[#1A1A1A] text-lg border-b border-gray-200 pb-3">Booking Details</h3>
+        
+        <div>
+          <label for="preferred_date" class="block text-sm font-semibold text-gray-700 mb-1">Preferred Date <span class="text-[#E31E24]">*</span></label>
+          <input type="date" id="preferred_date" name="preferred_date" required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900" />
+        </div>
+
+        <div>
+          <label for="work_required" class="block text-sm font-semibold text-gray-700 mb-1">Work Required / Notes <span class="text-[#E31E24]">*</span></label>
+          <textarea id="work_required" name="work_required" required rows="4"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#E31E24] focus:ring-2 focus:ring-[#E31E24]/20 outline-none transition-colors text-gray-900 resize-none"
+            placeholder="e.g. Logbook service, brakes squealing, pink slip required..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" id="submit-btn"
+        class="w-full bg-[#E31E24] hover:bg-red-700 text-white font-bold text-lg py-4 rounded-xl transition-all hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-3">
+        <span id="submit-text">Request Booking</span>
+        <svg id="submit-spinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+        </svg>
+      </button>
+
+      <p class="text-center text-sm text-gray-500">
+        Your booking request will be reviewed before confirmation. 
+        Or call us directly on <a href="tel:0265526131" class="text-[#E31E24] font-semibold">(02) 6552 6131</a>.
+      </p>
+
+    </form>
+  </div>
+</section>
+
+<script>
+const form = document.getElementById('booking-form') as HTMLFormElement;
+const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+const submitText = document.getElementById('submit-text') as HTMLSpanElement;
+const submitSpinner = document.getElementById('submit-spinner') as HTMLElement;
+const successMsg = document.getElementById('booking-success') as HTMLElement;
+const errorMsg = document.getElementById('booking-error') as HTMLElement;
+
+// Set min date to tomorrow
+const dateInput = document.getElementById('preferred_date') as HTMLInputElement;
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+dateInput.min = tomorrow.toISOString().split('T')[0];
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  submitBtn.disabled = true;
+  submitText.textContent = 'Sending...';
+  submitSpinner.classList.remove('hidden');
+  
+  const data = new FormData(form);
+  const payload = {
+    name: data.get('name'),
+    phone: data.get('phone'),
+    email: data.get('email'),
+    confirmation_preference: data.get('confirmation_preference'),
+    vehicle_make: data.get('vehicle_make'),
+    vehicle_model: data.get('vehicle_model'),
+    rego: (data.get('rego') as string)?.toUpperCase(),
+    rego_state: data.get('rego_state'),
+    preferred_date: data.get('preferred_date'),
+    work_required: data.get('work_required'),
+    submitted_at: new Date().toISOString(),
+    source: 'website_booking_form'
+  };
+
+  try {
+    const res = await fetch('/api/booking', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        action: 'create_flow',
+        goal: `New booking request from ${payload.name} — ${payload.vehicle_make} ${payload.vehicle_model} — ${payload.preferred_date} — Phone: ${payload.phone} — Email: ${payload.email} — Rego: ${payload.rego} ${payload.rego_state} — Work: ${payload.work_required}`,
+        status: 'queued'
+      })
+    });
+    
+    if (res.ok) {
+      form.classList.add('hidden');
+      successMsg.classList.remove('hidden');
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      throw new Error('Server error');
+    }
+  } catch {
+    errorMsg.classList.remove('hidden');
+    errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    submitBtn.disabled = false;
+    submitText.textContent = 'Request Booking';
+    submitSpinner.classList.add('hidden');
+  }
+});
+</script>

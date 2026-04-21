@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "tagline": "Who We Are",
+    "heading": "About Corney's",
+    "subtext": "A local Taree workshop built on doing the job right and treating people fairly."
+  },
+  "story": {
+    "heading": "Taree's Trusted Family Mechanic",
+    "paragraphs": [
+      "Corney's Automotive Services has been serving Taree and the Manning Valley for years. We're not a franchise. We're not a chain. We're a local family business — the kind where you deal with the people who actually work on your car, not a service counter that passes your keys to someone you've never met.",
+      "We work on all makes and models — from the family hatchback to the trade ute. We service vehicles the way we'd want our own cars serviced: properly, with quality parts, at a fair price, and with a straight explanation of what was done and why.",
+      "We're authorised to carry out pink slip safety inspections and blue slip AUVIS inspections for unregistered and interstate vehicles. We also issue defect clearances — so if you've been issued a defect notice, you don't need to run around finding a specialist. We can repair the defect and issue the clearance right here.",
+      "If you've had bad experiences with mechanics who charge you for things you didn't need, give you your car back with the same problem still happening, or never call when they say they will — we get it. That's not how we work. We tell you what's wrong, give you a price upfront, call you if anything changes, and hand your keys back when we say we will.",
+      "We're proud to be part of the Taree community. Our customers are local families, tradespeople, and businesses who've trusted us with their vehicles — and that trust isn't something we take lightly."
+    ]
+  },
+  "values": {
+    "heading": "How We Do Business",
+    "items": [
+      {
+        "emoji": "💬",
+        "title": "Honest Communication",
+        "desc": "We call before we do anything unexpected. You know what's happening to your car at every step."
+      },
+      {
+        "emoji": "💰",
+        "title": "Fair Pricing",
+        "desc": "Competitive rates, no hidden charges, and we'll always give you a quote before starting work."
+      },
+      {
+        "emoji": "🏁",
+        "title": "Done Right, On Time",
+        "desc": "Quality work, done properly, ready when we say it'll be ready. That's the standard we hold ourselves to."
+      }
+    ]
+  }
+}
