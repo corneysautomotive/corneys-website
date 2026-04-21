@@ -2,6 +2,7 @@ backend:
   name: github
   repo: corneysautomotive/corneys-website
   branch: main
+  base_url: https://corneys-cms-oauth.corneysautomotive.workers.dev
 
 # Local development: run `npx decap-server` and uncomment below
 # local_backend: true
