@@ -79,6 +79,39 @@ function renderInline(s: string) {
               ))}
             </div>
 
+            {service.pricing && (
+              <div class="mt-6">
+                <h3 class="font-display text-base sm:text-lg font-bold text-[#1A1A1A] mb-3">{service.pricing.heading}</h3>
+                <div class="overflow-hidden rounded-lg border border-gray-200">
+                  <table class="w-full text-sm sm:text-base bg-white">
+                    <thead>
+                      <tr class="bg-[#1A1A1A] text-white">
+                        <th class="text-left font-semibold px-4 py-2.5">Vehicle / Inspection Type</th>
+                        <th class="text-right font-semibold px-4 py-2.5">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {service.pricing.rows.map((row, i) => (
+                        <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                          <td class="px-4 py-2.5 text-gray-700 border-t border-gray-200">{row.label}</td>
+                          <td class="px-4 py-2.5 text-right font-bold text-[#E31E24] border-t border-gray-200 whitespace-nowrap">{row.price}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p class="mt-2 text-xs italic text-gray-500">These fees are regulated by Transport for NSW and are the same at every authorised inspection station.</p>
+                <div class="mt-4">
+                  <a
+                    href={service.pricing.bookingLink}
+                    class="inline-flex items-center gap-2 bg-[#E31E24] hover:bg-red-700 text-white font-semibold px-5 py-3 rounded-lg transition-colors text-sm"
+                  >
+                    {service.pricing.bookingLabel}
+                  </a>
+                </div>
+              </div>
+            )}
+
             <div class="mt-6 flex flex-col sm:flex-row gap-3">
               <a
                 href="/contact/"
