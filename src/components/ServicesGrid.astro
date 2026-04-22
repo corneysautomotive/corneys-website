@@ -14,13 +14,13 @@ const services = [
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>`,
     name: "Logbook Servicing",
-    desc: "Keep your new car warranty intact. We follow manufacturer schedules and stamp your logbook.",
+    desc: "Warranty-safe servicing to manufacturer spec. Stamped, recorded, half the dealer price.",
     href: "/services/#logbook"
   },
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
     name: "General Servicing & Repairs",
-    desc: "Oil changes, filters, belts, hoses — regular maintenance that keeps your car running reliably.",
+    desc: "Oil, filters, belts, timing, clutches, head gaskets — mechanical repairs done properly.",
     href: "/services/#general"
   },
   {
@@ -38,8 +38,10 @@ const services = [
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>`,
     name: "Air Conditioning",
-    desc: "Regas, repairs, and full AC service. Stay comfortable on those hot Taree summers.",
-    href: "/services/#aircon"
+    desc: "ARCtick licensed. $189 fixed-price regas. Leak tests from $88. Full AC repair.",
+    href: "/services/#aircon",
+    highlight: true,
+    badge: "ARCtick"
   },
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
@@ -49,25 +51,28 @@ const services = [
   },
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>`,
-    name: "Pink Slips",
-    desc: "Annual safety inspection required for NSW rego renewal. Fast, reliable, and done right.",
+    name: "Pink Slips (eSafety)",
+    desc: "Annual safety check for NSW rego renewal on vehicles 5+ years old. Usually 30–45 min.",
     href: "/services/#pinkslips",
-    highlight: true
+    highlight: true,
+    badge: "NSW Auth."
   },
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
     name: "Blue Slips (AUVIS)",
-    desc: "Need to register an unregistered vehicle or bring rego in from interstate? We're an authorised AUVIS inspection station.",
+    desc: "Deeper inspection for unregistered or interstate vehicles. We're an authorised AUVIS station.",
     href: "/services/#blueslips",
-    highlight: true
+    highlight: true,
+    badge: "AUVIS Auth."
   },
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>`,
     name: "Defect Clearances",
-    desc: "Received an RMS defect notice? We repair the issue and issue the clearance certificate so you can get back on the road.",
+    desc: "Got a defect notice? We repair the issue and submit the clearance so you're legal again.",
     href: "/services/#defects",
     highlight: true,
-    homeHidden: true
+    homeHidden: true,
+    badge: "NSW Auth."
   },
   {
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
@@ -127,7 +132,7 @@ const displayServices = showAll ? services : services.filter(s => !s.homeHidden)
           <div class="min-w-0">
             <h3 class="font-semibold text-[#1A1A1A] text-sm mb-1.5 group-hover:text-[#E31E24] transition-colors duration-300">
               {service.name}
-              {service.highlight && <span class="ml-2 text-[10px] font-bold text-[#E31E24] uppercase tracking-wide bg-[#E31E24]/10 px-1.5 py-0.5 rounded">NSW Auth.</span>}
+              {service.highlight && service.badge && <span class="ml-2 text-[10px] font-bold text-[#E31E24] uppercase tracking-wide bg-[#E31E24]/10 px-1.5 py-0.5 rounded">{service.badge}</span>}
             </h3>
             <p class="text-gray-500 text-xs leading-relaxed">{service.desc}</p>
           </div>

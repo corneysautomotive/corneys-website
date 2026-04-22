@@ -1,0 +1,118 @@
+---
+// AC / ARCtick callout — dedicated homepage section.
+// ARCtick licensing is Corney's single biggest differentiator — most Taree
+// workshops can't legally handle refrigerant. This section leads with that.
+import homeContent from '../content/home.json';
+import siteContent from '../content/site.json';
+
+const ac = homeContent.aircon;
+---
+
+<section
+  class="relative py-16 lg:py-24 bg-[#1A1A1A] overflow-hidden"
+  aria-label="ARCtick licensed air conditioning service"
+  id="arctick"
+>
+  <!-- Diagonal accent stripe background -->
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image: repeating-linear-gradient(-45deg, rgba(255,255,255,0.7) 0, rgba(255,255,255,0.7) 1px, transparent 0, transparent 48px); background-size: 48px 48px;"></div>
+
+  <!-- Soft red glow from the right -->
+  <div class="absolute top-0 right-0 w-[600px] h-[600px] opacity-20 pointer-events-none" aria-hidden="true" style="background: radial-gradient(circle, rgba(227,30,36,0.4) 0%, transparent 60%);"></div>
+
+  <!-- Red accent bar -->
+  <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#E31E24]"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+      <!-- Left: Text + points -->
+      <div class="lg:col-span-7 reveal">
+
+        <!-- ARCtick badge row -->
+        <div class="inline-flex items-center gap-2 bg-[#E31E24]/15 border border-[#E31E24]/40 text-[#E31E24] font-semibold text-xs uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-5">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2L3 6v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6l-9-4zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7z"/>
+          </svg>
+          {ac.eyebrow}
+        </div>
+
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-[1.08] mb-5">
+          {ac.heading}
+        </h2>
+
+        <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
+          {ac.subheading}
+        </p>
+
+        <!-- Capability bullets -->
+        <ul class="space-y-3 mb-8">
+          {ac.points.map((point) => (
+            <li class="flex items-start gap-3 text-gray-200 text-base">
+              <span class="mt-1 shrink-0 w-5 h-5 rounded-full bg-[#E31E24]/20 border border-[#E31E24]/60 flex items-center justify-center">
+                <svg class="w-3 h-3 text-[#E31E24]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href="/contact/?service=aircon"
+            class="inline-flex items-center justify-center gap-2 bg-[#E31E24] hover:bg-red-700 text-white font-bold px-7 py-3.5 rounded-lg transition-all hover:scale-[1.03] hover:shadow-[0_0_24px_rgba(227,30,36,0.4)]"
+          >
+            {ac.ctaText}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a
+            href={`tel:${siteContent.phoneTel}`}
+            class="inline-flex items-center justify-center gap-2 border-2 border-white/60 text-white hover:bg-white hover:text-[#1A1A1A] font-semibold px-6 py-3.5 rounded-lg transition-all"
+          >
+            {ac.ctaPhone}
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Price cards stack -->
+      <div class="lg:col-span-5 space-y-4 reveal">
+
+        <!-- Main price card: $189 regas -->
+        <div class="relative bg-gradient-to-br from-[#E31E24] to-[#B01820] rounded-2xl p-8 text-white overflow-hidden shadow-2xl shadow-[#E31E24]/20">
+          <!-- Decorative snowflake -->
+          <svg class="absolute -right-6 -top-6 w-40 h-40 opacity-20" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+            <path d="M50 5v90M5 50h90M16 16l68 68M84 16L16 84M50 20l-8 8M50 20l8 8M50 80l-8-8M50 80l8-8M20 50l8-8M20 50l8 8M80 50l-8-8M80 50l-8 8"
+              stroke="currentColor" stroke-width="3" fill="none"/>
+          </svg>
+
+          <p class="text-red-100 text-xs font-bold uppercase tracking-[0.2em] mb-3">{ac.priceLabel}</p>
+          <div class="flex items-baseline gap-2 mb-3">
+            <span class="font-display text-6xl font-extrabold leading-none tracking-tight">{ac.price}</span>
+            <span class="text-red-100 text-sm font-medium">flat</span>
+          </div>
+          <p class="text-red-100 text-sm leading-relaxed">{ac.priceSub}</p>
+        </div>
+
+        <!-- Secondary: leak test -->
+        <div class="bg-[#222222] border border-[#2E2E2E] rounded-2xl p-6">
+          <div class="flex items-baseline justify-between gap-3 mb-2">
+            <p class="text-gray-300 text-sm font-semibold uppercase tracking-wider">{ac.leakTestLabel}</p>
+            <span class="font-display text-2xl font-extrabold text-white">{ac.leakTestPrice}</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">{ac.leakTestSub}</p>
+        </div>
+
+        <!-- Trust line -->
+        <p class="text-gray-500 text-xs text-center">
+          Prices exclude GST. Non-standard vehicles, heavy-duty systems, and complex repairs quoted separately.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

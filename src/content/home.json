@@ -1,126 +1,145 @@
 {
   "hero": {
-    "tagline": "Taree's Trusted Local Mechanic",
-    "headlineLine1": "Your Car Fixed",
-    "headlineEmphasis": "Properly.",
-    "headlineLine2": "First Time.",
-    "subtext": "Taree's locally owned and trusted workshop. Honest quotes, quality work, and a customer focus. No upselling. No surprises.",
+    "tagline": "ARCtick Licensed · AUVIS Authorised · 20 Years in Taree",
+    "headlineLine1": "Taree's",
+    "headlineEmphasis": "ARCtick-Licensed",
+    "headlineLine2": "Workshop.",
+    "subtext": "We do the jobs most shops can't touch — legal AC regas, blue slips, defect clearances — plus everything your car needs in between. One workshop. Done properly. First time.",
     "badges": [
-      "Licensed & insured",
-      "Air Conditioning",
-      "Pink & blue slips",
-      "Warranty-safe servicing"
+      "ARCtick refrigerant licence",
+      "AUVIS blue slip station",
+      "Defect clearance authorised",
+      "All makes & models"
     ]
   },
   "stats": [
     {
       "value": "20+",
-      "label": "Years Serving Taree"
+      "label": "Years in Taree"
     },
     {
       "value": "5,000+",
-      "label": "Happy Customers"
+      "label": "Customers Served"
     },
     {
-      "value": "100%",
-      "label": "Locally Owned"
+      "value": "ARCtick",
+      "label": "Licensed"
     },
     {
       "value": "All Makes",
       "label": "& Models"
     }
   ],
+  "aircon": {
+    "eyebrow": "ARCtick Licensed",
+    "heading": "We can legally regas your AC. Most shops can't.",
+    "subheading": "Australia requires an ARCtick licence to handle automotive refrigerant. Corney's holds one. If your AC isn't cold, we're the closest workshop in Taree that can actually fix it — not just refer you somewhere else.",
+    "price": "$189",
+    "priceLabel": "Fixed-price AC regas",
+    "priceSub": "Standard passenger vehicle · All-inclusive · No surprises",
+    "leakTestPrice": "from $88",
+    "leakTestLabel": "Leak test",
+    "leakTestSub": "If your system has lost gas, we find the leak first — no point regassing a system that'll just lose it again.",
+    "points": [
+      "Licensed to handle all automotive refrigerants (R134a, R1234yf)",
+      "Proper recovery, evacuation and recharge — not a top-up",
+      "Leak diagnosis with UV dye or nitrogen pressure test",
+      "Full component repair (compressor, condenser, expansion valve)"
+    ],
+    "ctaText": "Book an AC Service",
+    "ctaPhone": "Or call (02) 6552 6131"
+  },
   "whyUs": {
-    "tagline": "Why Choose Us",
-    "heading": "The Taree Mechanic That Does It Right",
-    "subtext": "We built this workshop on one principle: do the job properly, efficiently and treat people with respect.",
+    "tagline": "Why Corney's",
+    "heading": "Workshop work done the right way — every single time.",
+    "subtext": "Four reasons Taree drivers have kept coming back for 20 years.",
     "points": [
       {
-        "title": "Family Owned & Operated",
-        "desc": "We're not a franchise. We're a local Taree family business. When you deal with us, you deal with the people who care and do the work on your car."
+        "title": "A Quote Before We Lift a Spanner",
+        "desc": "We diagnose, we call, we quote. Then you decide. No $200 service that mysteriously becomes $800 at pickup."
       },
       {
-        "title": "Straight Talk, No Surprises",
-        "desc": "We tell you what's wrong, what it'll cost, and what can wait. No inflated job sheets. No pressure. Just honest advice from people who know cars."
-      },
-      {
-        "title": "Latest Diagnostic Equipment",
-        "desc": "Modern cars need modern tools. Our diagnostic equipment reads the same data as the dealer — without the dealer price tag."
+        "title": "Licensed for the Jobs Most Can't Touch",
+        "desc": "ARCtick for AC work. AUVIS for blue slips. NSW authorised for pink slips and defect clearances. One stop — instead of three."
       },
       {
         "title": "Warranty-Safe Logbook Servicing",
-        "desc": "We service to manufacturer specifications and stamp your logbook — so your new car warranty stays exactly where it should be."
+        "desc": "Serviced to manufacturer specs, stamped by the book, recorded properly. Your new-car warranty stays exactly where it should."
+      },
+      {
+        "title": "The Mechanics Work on Your Car",
+        "desc": "Jarrad, Don and Toby — the three names on the shop wall — are the three people holding the spanners. No call centre, no apprentice-only jobs, no finger-pointing."
       }
     ]
   },
   "howItWorks": {
     "tagline": "The Process",
-    "heading": "Getting Your Car Fixed Is Simple",
-    "subtext": "No stress, no confusion, no hidden extras. Three steps and you're done.",
+    "heading": "Three steps. No stress.",
+    "subtext": "From booking to keys-in-hand, here's exactly how it works.",
     "steps": [
       {
         "number": "01",
-        "title": "Book Your Service",
-        "desc": "Book online, call us on (02) 6552 6131, or send a message — whatever suits you. We'll confirm a time that fits your schedule."
+        "title": "Book It In",
+        "desc": "Call (02) 6552 6131, send a message, or drop by. We'll lock in a time that suits — usually same week, often sooner."
       },
       {
         "number": "02",
-        "title": "Drop It Off",
-        "desc": "Bring your car to 16 Albert Lane, Taree. We'll assess it, call you with a clear quote before we start — no surprises."
+        "title": "We Diagnose & Quote",
+        "desc": "Drop your car at 16 Albert Lane. We check it over, call you with a clear quote before starting, and only do what you've approved."
       },
       {
         "number": "03",
-        "title": "Pick It Up",
-        "desc": "We'll message you when it's done. Your car is fixed properly, you know exactly what was done and why, and you're back on the road."
+        "title": "Keys Back, Job Done",
+        "desc": "We message when it's ready. Clear rundown of what was done, why, and what the bill was — matching the quote."
       }
     ]
   },
   "testimonials": {
-    "tagline": "What Our Customers Say",
-    "heading": "Real People. Real Reviews.",
-    "subtext": "Don't take our word for it — here's what Taree locals say about us.",
+    "tagline": "Customer Reviews",
+    "heading": "What Taree drivers say.",
+    "subtext": "Five stars on Google. Here's why.",
     "reviews": [
       {
         "name": "Sarah M.",
         "location": "Taree",
-        "vehicle": "Toyota Corolla",
+        "vehicle": "2018 Toyota Corolla",
         "stars": 5,
-        "text": "Finally a mechanic that just tells you straight. Brought my Corolla in for a service and they called before doing anything extra. Honest quote, no drama. Back on the road the same day."
+        "text": "Booked in for a logbook service, they called before doing anything extra — found a cracked rear shock but gave me the option. Done by 4pm, quote matched the bill to the dollar. That's rare."
       },
       {
         "name": "Dave R.",
         "location": "Taree",
-        "vehicle": "Ford Ranger",
+        "vehicle": "2020 Ford Ranger",
         "stars": 5,
-        "text": "Had an urgent brake issue and they fit me in first thing. Fixed properly, price was fair, and they explained exactly what was wrong. Couldn't ask for more from a local workshop."
+        "text": "Front brakes started grinding on a Monday morning. Rang Corney's at 8am, they fit me in by 10, had new pads and machined rotors back to me same day. Proper job, fair price, no drama."
       },
       {
         "name": "Michelle T.",
         "location": "Old Bar",
-        "vehicle": "Mazda CX-5",
+        "vehicle": "2019 Mazda CX-5",
         "stars": 5,
-        "text": "Used to dread taking my car to the mechanic — always felt like I was being taken advantage of. Not here. They showed me exactly what needed doing and what could wait. Trust is everything."
+        "text": "AC had been weak for ages. Every other shop wanted to just 'top it up' — Corney's did a proper leak test, found a bad O-ring on the condenser, fixed it and regassed. Ice cold since. $189 regas plus the repair — no upsell, no games."
       },
       {
         "name": "Tom K.",
         "location": "Wingham",
-        "vehicle": "Holden Colorado",
+        "vehicle": "2016 Holden Colorado",
         "stars": 5,
-        "text": "Got a pink slip done quickly and they spotted a few other things that were getting close to needing attention. Warned me without pressuring me. That's the kind of place I keep coming back to."
+        "text": "Pink slip done in under an hour. They flagged a CV boot starting to split — not a fail, but warned me before it became one. That's the kind of heads-up you only get from a mechanic who's not trying to fleece you."
       },
       {
         "name": "Karen B.",
         "location": "Taree",
-        "vehicle": "Hyundai Tucson",
+        "vehicle": "2021 Hyundai Tucson",
         "stars": 5,
-        "text": "Logbook service was done exactly to the manufacturer specs. They stamped my logbook, showed me the items they checked, and the price matched what they quoted. Simple as that."
+        "text": "New-car warranty means I had to stick to the logbook. Corney's used the right oil, the right filter, stamped the book, emailed me the invoice. Warranty intact, half the price of the dealer in Newcastle."
       },
       {
         "name": "James L.",
         "location": "Forster",
-        "vehicle": "Toyota HiLux",
+        "vehicle": "2017 Toyota HiLux",
         "stars": 5,
-        "text": "Air con wasn't keeping up in summer. Dropped it off, they found a small leak, repaired and regassed it same day. Ice cold now. Brilliant service, will absolutely be back."
+        "text": "Interstate plates, rego expired. Needed a blue slip before I could re-register. Corney's are an AUVIS station so it was one visit instead of two. Straight, fast, sorted."
       }
     ]
   }

@@ -1,20 +1,20 @@
 {
   "hero": {
     "tagline": "What We Do",
-    "heading": "Our Services",
-    "subtext": "Everything your car needs, under one roof in Taree. All makes and models, all types of vehicles."
+    "heading": "Every service your car needs — in one Taree workshop.",
+    "subtext": "Logbook servicing to blue slips, AC regas to defect clearances. All makes, all models, all handled in-house at 16 Albert Lane."
   },
   "bookingCta": {
-    "heading": "Can't Find What You're Looking For?",
-    "subtext": "Give us a call \u2014 if it's mechanical, we probably do it. (02) 6552 6131"
+    "heading": "Not sure what you need? Just call.",
+    "subtext": "Two minutes on the phone usually sorts it. (02) 6552 6131 — Mon–Fri 8:30am–4:30pm."
   },
   "services": [
     {
       "id": "logbook",
       "name": "Logbook Servicing",
       "emoji": "\ud83d\udccb",
-      "summary": "Keep your new car warranty intact with manufacturer-approved logbook servicing.",
-      "body": "When you buy a new car, the manufacturer requires it to be serviced according to their schedule \u2014 with the right parts, the right fluids, and the work recorded in your logbook. Miss a service or use the wrong oil, and your warranty can be voided.\n\nAt Corney's, we service your vehicle exactly to manufacturer specifications. We use quality parts and fluids that meet or exceed OEM standards, and we stamp your logbook after every service. You keep your warranty, and your car gets the care it was designed to receive.\n\nWhether you're driving a Toyota, Hyundai, Ford, Mazda, or anything else \u2014 bring it to us and we'll look after it properly.",
+      "summary": "Warranty-safe servicing to manufacturer spec \u2014 stamped, recorded, half the price of the dealer.",
+      "body": "Under Australian Consumer Law you do not have to service your new car at the dealer \u2014 you just have to service it to the manufacturer's logbook schedule, using parts and fluids that meet or exceed the original specification. Miss a service or use the wrong oil, and the warranty can be voided.\n\nCorney's does logbook servicing the right way. We follow the exact manufacturer schedule for your make, model and year. We use OEM-equivalent (or genuine) parts and fluids. We stamp your logbook and keep a digital record. Your new-car warranty stays completely intact \u2014 and you save hundreds compared with dealer servicing.\n\nToyota, Mazda, Ford, Hyundai, Kia, Mitsubishi, Nissan, Subaru, Holden, VW, European \u2014 all covered. Bring the logbook, we'll do the rest.",
       "cta": "Book a Logbook Service",
       "highlight": false
     },
@@ -22,8 +22,8 @@
       "id": "general",
       "name": "General Servicing & Repairs",
       "emoji": "\ud83d\udd27",
-      "summary": "Oil changes, filters, belts, hoses \u2014 keeping your car running reliably between major services.",
-      "body": "Regular maintenance is what keeps cars out of the workshop for expensive repairs. A simple oil and filter change at the right interval prevents engine wear. New spark plugs keep fuel economy up. A fresh air filter means your engine breathes properly.\n\nWe handle all routine servicing for all makes and models \u2014 whether it's a basic service or a more involved repair job. We'll always tell you what's genuinely due and what can wait, so you're never spending money you don't need to.\n\nIf something unexpected comes up during the service, we call before we do anything. No surprises.",
+      "summary": "Routine servicing, mechanical repairs, and everything between \u2014 done right the first time.",
+      "body": "Regular servicing is the cheapest insurance you'll ever buy for your car. An $80 oil and filter change at the right interval prevents a $4,000 engine rebuild. Fresh spark plugs save real fuel. A clean air filter protects the engine.\n\nWe handle full servicing and mechanical repairs across every make and model \u2014 from the basic interval service through to timing belts, clutches, head gaskets and beyond. We tell you what's genuinely due, what can safely wait, and what's urgent. No padding the invoice.\n\nIf we find something mid-job that wasn't in the quote, we stop and call you. Nothing gets done without your say-so.",
       "cta": "Book a Service",
       "highlight": false
     },
@@ -31,8 +31,8 @@
       "id": "brakes",
       "name": "Brakes",
       "emoji": "\u26d4",
-      "summary": "Brake pads, rotors, callipers, and fluid \u2014 we won't let you leave on unsafe brakes.",
-      "body": "Your brakes are the most critical safety system on your vehicle. When they need attention, they don't always wait until it's convenient.\n\nCommon brake warning signs: squealing or grinding when braking, pulling to one side, a spongy or soft pedal, or the brake warning light on your dash. If you notice any of these, book in now \u2014 don't wait.\n\nWe inspect, repair, and replace brake pads, rotors, brake callipers, brake lines, and brake fluid. We'll tell you exactly what's needed, show you the worn parts if you want to see them, and have you back on the road with full confidence in your brakes.",
+      "summary": "Pads, rotors, callipers, fluid \u2014 diagnosed properly, priced fairly, back on the road same day where possible.",
+      "body": "Brakes are the one system you never compromise on. Warning signs: squealing, grinding, a soft or spongy pedal, vibration through the steering when you brake, pulling to one side, or a brake warning light. Any of those \u2014 book in this week.\n\nWe inspect, repair and replace the full brake system: pads, rotors (machined or replaced), callipers, flex hoses, brake lines and fluid. We use reputable brands \u2014 Bendix, Bosch, genuine \u2014 not the cheapest tin on the shelf. We'll show you the worn parts if you want to see them.\n\nMost front-pad jobs are back to you same day. No driving away on brakes that aren't right.",
       "cta": "Book a Brake Check",
       "highlight": false
     },
@@ -47,10 +47,10 @@
     },
     {
       "id": "aircon",
-      "name": "Air Conditioning",
+      "name": "Air Conditioning (ARCtick Licensed)",
       "emoji": "\u2744\ufe0f",
-      "summary": "ARCtick licensed \u2014 AC regas $189 fixed price. Repairs, recharges, and full AC service.",
-      "body": "Corney's holds an ARCtick refrigerant licence \u2014 meaning we're authorised to handle automotive refrigerant gases legally and correctly. Most general workshops can't legally perform AC regas work. We can.\n\nAC regas for a standard passenger vehicle is a fixed price: $189 all-inclusive. No hidden charges, no surprises. If your system has a leak or a component failure, we'll diagnose it and quote the repair before doing anything.\n\nCommon AC issues we handle: the system not blowing cold, weak airflow, unpleasant smells from the vents, or AC compressor failure. We regas systems that have lost refrigerant, repair leaks, and replace components that have failed.\n\nIf you think you have a leak, the first step is a leak test (from $88). We find the leak, quote the repair, then regas once it's fixed. There's no point regassing a leaking system \u2014 the gas will just escape again.\n\nWe also service AC systems as part of logbook servicing \u2014 keeping the system in good shape means it lasts longer and works better when you need it.",
+      "summary": "$189 fixed-price regas. Leak tests from $88. The closest ARCtick-licensed workshop in Taree.",
+      "body": "Under Australian law, handling automotive refrigerant requires an ARCtick licence. Corney's holds one \u2014 most general workshops in the Mid North Coast don't. If you've been told 'we can't do AC here', we can.\n\n**Fixed-price AC regas: $189.** Standard passenger vehicle, all-inclusive. Proper recovery, evacuation and recharge \u2014 not just a top-up through a can you bought at Supercheap. For non-standard vehicles, heavy-duty systems or R1234yf (newer refrigerant) we'll quote up front.\n\nIf your AC has lost gas, regassing without finding the leak is money down the drain. We offer **leak tests from $88** using UV dye or nitrogen pressure \u2014 we find it, quote the repair, then regas once it's sealed. That way the gas stays in the system.\n\nWe also handle full AC repairs: compressors, condensers, expansion valves, evaporators, blower motors, bad smells, weak airflow and climate-control faults. Whatever your AC is doing (or not doing), bring it in.",
       "cta": "Book an AC Service",
       "highlight": true
     },
@@ -83,10 +83,10 @@
     },
     {
       "id": "pinkslips",
-      "name": "Pink Slips (Roadworthy Inspections)",
+      "name": "Pink Slips (eSafety Check)",
       "emoji": "\ud83d\udcdd",
-      "summary": "Annual safety inspection required for NSW rego renewal. Fast, thorough, and done right.",
-      "body": "A Pink Slip (also called a Safety Check or eS certificate) is required in NSW each year when renewing registration on vehicles more than 5 years old. It confirms your vehicle meets the minimum safety requirements to be on the road.\n\nThe inspection covers brakes, tyres, steering, suspension, lights, windscreen, seat belts, and more. If your vehicle passes, we issue the eS certificate electronically and you can renew your rego immediately.\n\nIf something doesn't pass, we'll explain exactly what needs to be fixed, give you a quote to fix it, and re-inspect once it's repaired. We won't fail you on something trivial \u2014 but we won't pass something that's genuinely unsafe either.",
+      "summary": "In plain English: a Pink Slip is the annual safety check you need to renew NSW rego on a vehicle 5+ years old.",
+      "body": "A Pink Slip (formally an eSafety inspection) is required every year when you renew NSW registration on any light vehicle older than 5 years. It confirms the vehicle meets minimum safety standards \u2014 brakes, tyres, steering, suspension, lights, wipers, seat belts, windscreen, exhaust and body condition.\n\nWe do them quickly and fairly. Most pink slips are 30\u201345 minutes. If your vehicle passes, we lodge the eS certificate electronically with Transport for NSW and you can renew your rego the same day.\n\nIf something fails, we explain exactly what \u2014 and quote the repair before touching anything. We won't fail a car on something petty. We also won't pass something unsafe. You leave knowing where you stand.",
       "cta": "Book a Pink Slip",
       "highlight": false
     },
@@ -94,8 +94,8 @@
       "id": "blueslips",
       "name": "Blue Slips (AUVIS Inspection)",
       "emoji": "\ud83d\udd35",
-      "summary": "Authorised AUVIS inspection station for unregistered vehicles, interstate transfers, and lapsed rego.",
-      "body": "A Blue Slip is required in NSW when you want to register a vehicle that isn't currently registered \u2014 including vehicles that have never been registered in NSW, vehicles coming from interstate, or vehicles that have had their rego lapse.\n\nUnlike a Pink Slip (which is just a safety check for annual rego renewal), a Blue Slip is a more comprehensive AUVIS (Authorised Unregistered Vehicle Inspection Scheme) inspection. It verifies that the vehicle is safe, meets NSW standards, and that its identity is correct (VIN, compliance plates, and so on).\n\nCorney's is an authorised AUVIS inspection station. Once we issue the Blue Slip, you can proceed with registration at Service NSW. If you're not sure whether you need a pink slip or a blue slip, just give us a call \u2014 we'll point you in the right direction.",
+      "summary": "In plain English: a Blue Slip is the deeper inspection you need to put an unregistered or interstate vehicle on NSW plates.",
+      "body": "A Blue Slip is required in NSW whenever you want to register a vehicle that isn't currently registered in the state \u2014 interstate vehicles, vehicles whose rego has lapsed, rebuilt vehicles, or anything that's never been on NSW plates.\n\nIt's more comprehensive than a pink slip. Blue slips are AUVIS (Authorised Unregistered Vehicle Inspection Scheme) inspections: we verify the vehicle's identity (VIN, compliance plates, engine number), confirm it meets NSW vehicle standards, and check it's mechanically safe for the road.\n\n**Corney's is an authorised AUVIS station** \u2014 not many workshops in Taree are. Once we issue the Blue Slip, you take it to Service NSW to register. Not sure if you need a pink slip or a blue slip? Give us a call, two minutes will sort it.",
       "cta": "Book a Blue Slip",
       "highlight": true
     },
@@ -103,8 +103,8 @@
       "id": "defects",
       "name": "Defect Clearances",
       "emoji": "\u2705",
-      "summary": "Received an RMS or police defect notice? We fix the issue and issue the clearance so you can get back on the road.",
-      "body": "If your vehicle has been issued a defect notice by police or the NSW Roads and Maritime Services (RMS), the vehicle can't be driven on public roads until the defects are repaired and a clearance is issued by an authorised repairer.\n\nMany people don't realise their regular mechanic can issue these clearances \u2014 but Corney's can. We assess the defects listed on your notice, carry out the required repairs, inspect the vehicle, and issue the clearance certificate.\n\nCommon defects we clear: unroadworthy tyres, brake issues, lighting faults, exhaust problems, and suspension issues. If you've received a defect notice, call us straightaway \u2014 we'll get you sorted quickly so you're back on the road legally.",
+      "summary": "Got a defect notice from police or Transport for NSW? We repair and clear it so you're legal again.",
+      "body": "If you've been stopped by police or an RMS inspector and issued a defect notice, the vehicle can't legally be driven on public roads until the listed defects are repaired and cleared by an authorised repairer. Ignore it, and fines and rego cancellation follow.\n\nCorney's is an authorised defect-clearance workshop. We work through the items on your notice \u2014 brakes, tyres, lights, exhaust, suspension, bodywork, modifications \u2014 repair what's needed, re-inspect the vehicle, and submit the clearance. Usually back on the road within days, often sooner.\n\nIf you've just been defected and don't know what to do, call us the same day. Priority booking for defect jobs.",
       "cta": "Book a Defect Clearance",
       "highlight": true
     },
