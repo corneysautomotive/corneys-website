@@ -157,3 +157,36 @@ collections:
                   - { label: "Emoji", name: "emoji", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "desc", widget: "text" }
+
+  # ── Services page ────────────────────────────────────────────────────────────────────────────
+  - name: "services"
+    label: "Services Page"
+    files:
+      - name: "services"
+        label: "Services Page Content"
+        file: "src/content/services.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }
+          - label: "Booking CTA"
+            name: "bookingCta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "string" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "ID (no spaces, lowercase)", name: "id", widget: "string" }
+              - { label: "Service Name", name: "name", widget: "string" }
+              - { label: "Emoji", name: "emoji", widget: "string" }
+              - { label: "Short Summary (red tagline)", name: "summary", widget: "text" }
+              - { label: "Full Description", name: "body", widget: "text", hint: "Use a blank line between paragraphs" }
+              - { label: "Button Text", name: "cta", widget: "string" }
+              - { label: "NSW Authorised Badge", name: "highlight", widget: "boolean", default: false, hint: "Shows the red NSW Authorised badge" }
