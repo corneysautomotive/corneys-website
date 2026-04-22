@@ -1,15 +1,15 @@
 {
   "hero": {
-    "tagline": "ARCtick Licensed · AUVIS Authorised · 20 Years in Taree",
-    "headlineLine1": "Taree's",
-    "headlineEmphasis": "ARCtick-Licensed",
-    "headlineLine2": "Workshop.",
-    "subtext": "We do the jobs most shops can't touch — legal AC regas, blue slips, defect clearances — plus everything your car needs in between. One workshop. Done properly. First time.",
+    "tagline": "Taree's local workshop \u2014 all makes, all models",
+    "headlineLine1": "Your car,",
+    "headlineEmphasis": "fixed properly.",
+    "headlineLine2": "First time.",
+    "subtext": "Mechanical repairs, logbook servicing, pink and blue slips, AC regas \u2014 everything your car needs, at one address in Taree. We quote before we start and call before we spend a dollar more.",
     "badges": [
-      "ARCtick refrigerant licence",
-      "AUVIS blue slip station",
-      "Defect clearance authorised",
-      "All makes & models"
+      "20+ years in Taree",
+      "All makes & models",
+      "ARCtick licensed",
+      "AUVIS authorised"
     ]
   },
   "stats": [
@@ -33,16 +33,16 @@
   "aircon": {
     "eyebrow": "ARCtick Licensed",
     "heading": "We can legally regas your AC. Most shops can't.",
-    "subheading": "Australia requires an ARCtick licence to handle automotive refrigerant. Corney's holds one. If your AC isn't cold, we're the closest workshop in Taree that can actually fix it — not just refer you somewhere else.",
+    "subheading": "Australia requires an ARCtick licence to handle automotive refrigerant. Corney's holds one. If your AC isn't cold, we're the closest workshop in Taree that can actually fix it \u2014 not just refer you somewhere else.",
     "price": "$189",
     "priceLabel": "Fixed-price AC regas",
-    "priceSub": "Standard passenger vehicle · All-inclusive · No surprises",
+    "priceSub": "Standard passenger vehicle \u00b7 All-inclusive \u00b7 No surprises",
     "leakTestPrice": "from $88",
     "leakTestLabel": "Leak test",
-    "leakTestSub": "If your system has lost gas, we find the leak first — no point regassing a system that'll just lose it again.",
+    "leakTestSub": "If your system has lost gas, we find the leak first \u2014 no point regassing a system that'll just lose it again.",
     "points": [
       "Licensed to handle all automotive refrigerants (R134a, R1234yf)",
-      "Proper recovery, evacuation and recharge — not a top-up",
+      "Proper recovery, evacuation and recharge \u2014 not a top-up",
       "Leak diagnosis with UV dye or nitrogen pressure test",
       "Full component repair (compressor, condenser, expansion valve)"
     ],
@@ -51,7 +51,7 @@
   },
   "whyUs": {
     "tagline": "Why Corney's",
-    "heading": "Workshop work done the right way — every single time.",
+    "heading": "Workshop work done the right way \u2014 every single time.",
     "subtext": "Four reasons Taree drivers have kept coming back for 20 years.",
     "points": [
       {
@@ -60,7 +60,7 @@
       },
       {
         "title": "Licensed for the Jobs Most Can't Touch",
-        "desc": "ARCtick for AC work. AUVIS for blue slips. NSW authorised for pink slips and defect clearances. One stop — instead of three."
+        "desc": "ARCtick for AC work. AUVIS for blue slips. NSW authorised for pink slips and defect clearances. One stop \u2014 instead of three."
       },
       {
         "title": "Warranty-Safe Logbook Servicing",
@@ -68,7 +68,7 @@
       },
       {
         "title": "The Mechanics Work on Your Car",
-        "desc": "Jarrad, Don and Toby — the three names on the shop wall — are the three people holding the spanners. No call centre, no apprentice-only jobs, no finger-pointing."
+        "desc": "Jarrad, Don and Toby \u2014 the three names on the shop wall \u2014 are the three people holding the spanners. No call centre, no apprentice-only jobs, no finger-pointing."
       }
     ]
   },
@@ -80,7 +80,7 @@
       {
         "number": "01",
         "title": "Book It In",
-        "desc": "Call (02) 6552 6131, send a message, or drop by. We'll lock in a time that suits — usually same week, often sooner."
+        "desc": "Call (02) 6552 6131, send a message, or drop by. We'll lock in a time that suits \u2014 usually same week, often sooner."
       },
       {
         "number": "02",
@@ -90,7 +90,7 @@
       {
         "number": "03",
         "title": "Keys Back, Job Done",
-        "desc": "We message when it's ready. Clear rundown of what was done, why, and what the bill was — matching the quote."
+        "desc": "We message when it's ready. Clear rundown of what was done, why, and what the bill was \u2014 matching the quote."
       }
     ]
   },
@@ -104,7 +104,7 @@
         "location": "Taree",
         "vehicle": "2018 Toyota Corolla",
         "stars": 5,
-        "text": "Booked in for a logbook service, they called before doing anything extra — found a cracked rear shock but gave me the option. Done by 4pm, quote matched the bill to the dollar. That's rare."
+        "text": "Booked in for a logbook service, they called before doing anything extra \u2014 found a cracked rear shock but gave me the option. Done by 4pm, quote matched the bill to the dollar. That's rare."
       },
       {
         "name": "Dave R.",
@@ -118,14 +118,14 @@
         "location": "Old Bar",
         "vehicle": "2019 Mazda CX-5",
         "stars": 5,
-        "text": "AC had been weak for ages. Every other shop wanted to just 'top it up' — Corney's did a proper leak test, found a bad O-ring on the condenser, fixed it and regassed. Ice cold since. $189 regas plus the repair — no upsell, no games."
+        "text": "AC had been weak for ages. Every other shop wanted to just 'top it up' \u2014 Corney's did a proper leak test, found a bad O-ring on the condenser, fixed it and regassed. Ice cold since. $189 regas plus the repair \u2014 no upsell, no games."
       },
       {
         "name": "Tom K.",
         "location": "Wingham",
         "vehicle": "2016 Holden Colorado",
         "stars": 5,
-        "text": "Pink slip done in under an hour. They flagged a CV boot starting to split — not a fail, but warned me before it became one. That's the kind of heads-up you only get from a mechanic who's not trying to fleece you."
+        "text": "Pink slip done in under an hour. They flagged a CV boot starting to split \u2014 not a fail, but warned me before it became one. That's the kind of heads-up you only get from a mechanic who's not trying to fleece you."
       },
       {
         "name": "Karen B.",
