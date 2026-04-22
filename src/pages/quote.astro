@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+---
+
+<Layout
+  title="Get a Quote — Corney's Automotive Services, Taree"
+  description="Request a quote from Corney's Automotive Services in Taree. Tell us about your vehicle and what you need — we'll get back to you promptly."
+>
+  <Header currentPage="/quote/" />
+
+  <main>
+    <section class="bg-white py-16 lg:py-24">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-3">Free Quote</p>
+          <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-[#1A1A1A] mb-4">
+            Get a Quote
+          </h1>
+          <p class="text-gray-500 text-lg max-w-xl mx-auto">
+            Tell us about your vehicle and what you need. We'll review your request and get back to you with a quote as soon as possible.
+          </p>
+          <p class="mt-3 text-gray-400 text-sm">
+            Prefer to talk? Call us on <a href="tel:0265526131" class="text-[#E31E24] font-semibold hover:underline">(02) 6552 6131</a>
+          </p>
+        </div>
+
+        <!-- Success state -->
+        <div id="quote-success" class="hidden bg-green-50 border border-green-200 rounded-2xl p-8 text-center mb-8">
+          <div class="text-green-500 text-5xl mb-4">✓</div>
+          <h2 class="font-bold text-green-800 text-xl mb-2">Quote Request Received!</h2>
+          <p class="text-green-700 mb-4">We'll review your request and get back to you shortly — usually within a few hours during business hours.</p>
+          <p class="text-green-600 text-sm">If it's urgent, call us directly on <a href="tel:0265526131" class="font-bold underline">(02) 6552 6131</a></p>
+        </div>
+
+        <!-- Error state -->
+        <div id="quote-error" class="hidden bg-red-50 border border-red-200 rounded-2xl p-6 text-center mb-8">
+          <h2 class="font-bold text-red-800 text-lg mb-2">Something went wrong</h2>
+          <p class="text-red-700">Please call us on <a href="tel:0265526131" class="font-bold underline">(02) 6552 6131</a> and we'll sort out a quote over the phone.</p>
+        </div>
+
+        <!-- Quote form -->
+        <form
+          id="quote-form"
+          class="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 sm:p-8 space-y-6"
+          novalidate
+        >
+
+          <!-- Your details -->
+          <div>
+            <h2 class="text-base font-bold text-gray-900 uppercase tracking-wider mb-4 pb-2 border-b border-gray-100">Your Details</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                  Full Name <span class="text-[#E31E24]">*</span>
+                </label>
+                <input
+                  type="text" id="name" name="name" required autocomplete="name"
+                  placeholder="Your name"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition"
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                  Phone <span class="text-[#E31E24]">*</span>
+                </label>
+                <input
+                  type="tel" id="phone" name="phone" required autocomplete="tel"
+                  placeholder="0400 000 000"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition"
+                />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="email" class="block text-sm font-semibold text-gray-700 mb-1.5">Email</label>
+              <input
+                type="email" id="email" name="email" autocomplete="email"
+                placeholder="your@email.com (for written quote)"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition"
+              />
+            </div>
+          </div>
+
+          <!-- Vehicle details -->
+          <div>
+            <h2 class="text-base font-bold text-gray-900 uppercase tracking-wider mb-4 pb-2 border-b border-gray-100">Your Vehicle</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="make" class="block text-sm font-semibold text-gray-700 mb-1.5">Make <span class="text-[#E31E24]">*</span></label>
+                <input
+                  type="text" id="make" name="make" required
+                  placeholder="Toyota, Ford..."
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition"
+                />
+              </div>
+              <div>
+                <label for="model" class="block text-sm font-semibold text-gray-700 mb-1.5">Model <span class="text-[#E31E24]">*</span></label>
+                <input
+                  type="text" id="model" name="model" required
+                  placeholder="HiLux, Ranger..."
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition"
+                />
+              </div>
+              <div>
+                <label for="year" class="block text-sm font-semibold text-gray-700 mb-1.5">Year</label>
+                <input
+                  type="text" id="year" name="year"
+                  placeholder="2020"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition"
+                />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="rego" class="block text-sm font-semibold text-gray-700 mb-1.5">Registration Number <span class="text-gray-400 font-normal">(optional)</span></label>
+              <input
+                type="text" id="rego" name="rego"
+                placeholder="ABC123"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition uppercase"
+              />
+            </div>
+          </div>
+
+          <!-- What do you need -->
+          <div>
+            <h2 class="text-base font-bold text-gray-900 uppercase tracking-wider mb-4 pb-2 border-b border-gray-100">What Do You Need?</h2>
+            <div class="mb-4">
+              <label for="service-type" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                Service Type <span class="text-[#E31E24]">*</span>
+              </label>
+              <select
+                id="service-type" name="service_type" required
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition bg-white"
+              >
+                <option value="">Select a service...</option>
+                <optgroup label="Servicing">
+                  <option value="logbook-petrol">Logbook Service — Petrol</option>
+                  <option value="logbook-diesel">Logbook Service — Diesel</option>
+                  <option value="general-service">General Service / Oil Change</option>
+                </optgroup>
+                <optgroup label="Safety Inspections">
+                  <option value="pink-slip">Pink Slip (eSafety Check)</option>
+                  <option value="blue-slip">Blue Slip (AUVIS Inspection)</option>
+                  <option value="defect-clearance">Defect Clearance</option>
+                </optgroup>
+                <optgroup label="Repairs">
+                  <option value="brakes">Brakes</option>
+                  <option value="suspension">Suspension & Steering</option>
+                  <option value="electrical">Electrical / Battery</option>
+                  <option value="cooling">Cooling System</option>
+                  <option value="engine">Engine / General Repair</option>
+                  <option value="diagnostics">Diagnostics / Check Engine Light</option>
+                </optgroup>
+                <optgroup label="Air Conditioning">
+                  <option value="ac-regas">AC Regas ($189 fixed)</option>
+                  <option value="ac-leak-test">AC Leak Test (from $88)</option>
+                  <option value="ac-repair">AC Repair / Other</option>
+                </optgroup>
+                <optgroup label="Other">
+                  <option value="pre-purchase">Pre-Purchase Inspection</option>
+                  <option value="tyres">Tyres</option>
+                  <option value="other">Other / Not Sure</option>
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <label for="description" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                Tell Us More <span class="text-gray-400 font-normal">(the more detail the better)</span>
+              </label>
+              <textarea
+                id="description" name="description" rows="4"
+                placeholder="Describe the issue, any symptoms, when it started, anything relevant..."
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E31E24] focus:border-transparent transition resize-y"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Consent -->
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox" id="consent" name="consent" required
+              class="mt-1 h-4 w-4 rounded border-gray-300 text-[#E31E24] focus:ring-[#E31E24] shrink-0"
+            />
+            <label for="consent" class="text-xs text-gray-500 leading-relaxed">
+              By submitting this form I agree to Corney's Automotive Services'
+              <a href="/privacy/" class="text-[#E31E24] hover:underline" target="_blank">Privacy Policy</a>
+              and
+              <a href="/terms/" class="text-[#E31E24] hover:underline" target="_blank">Terms & Conditions</a>.
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="w-full bg-[#E31E24] hover:bg-red-700 text-white font-bold py-4 rounded-lg transition-colors text-base"
+          >
+            Request My Quote
+          </button>
+
+          <p class="text-center text-xs text-gray-400">
+            We'll get back to you within a few hours during business hours. For urgent jobs call us directly.
+          </p>
+        </form>
+
+        <!-- Fixed-price callout -->
+        <div class="mt-8 bg-gray-50 border border-gray-200 rounded-2xl p-6">
+          <p class="text-sm font-semibold text-gray-700 mb-3">Fixed-price services — no quote needed:</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-[#E31E24]/10 flex items-center justify-center text-[#E31E24] font-bold text-sm shrink-0">❄</span>
+              <div>
+                <p class="text-sm font-semibold text-gray-800">AC Regas</p>
+                <p class="text-xs text-gray-500">$189 all-inclusive · standard passenger vehicle</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-[#E31E24]/10 flex items-center justify-center text-[#E31E24] font-bold text-sm shrink-0">✓</span>
+              <div>
+                <p class="text-sm font-semibold text-gray-800">AC Leak Test</p>
+                <p class="text-xs text-gray-500">from $88 · find the leak before regassing</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 mt-4">For these services, just call <a href="tel:0265526131" class="text-[#E31E24] font-semibold">(02) 6552 6131</a> to book directly.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <MobileCTABar />
+</Layout>
+
+<script>
+  const form = document.getElementById('quote-form') as HTMLFormElement | null;
+  const success = document.getElementById('quote-success');
+  const error = document.getElementById('quote-error');
+
+  const WEBHOOK_URL = 'http://127.0.0.1:18789/plugins/webhooks/quote';
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Basic validation
+    const name = (document.getElementById('name') as HTMLInputElement)?.value.trim();
+    const phone = (document.getElementById('phone') as HTMLInputElement)?.value.trim();
+    const make = (document.getElementById('make') as HTMLInputElement)?.value.trim();
+    const model = (document.getElementById('model') as HTMLInputElement)?.value.trim();
+    const serviceType = (document.getElementById('service-type') as HTMLSelectElement)?.value;
+    const consent = (document.getElementById('consent') as HTMLInputElement)?.checked;
+
+    if (!name || !phone || !make || !model || !serviceType || !consent) {
+      alert('Please fill in all required fields and accept the terms.');
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const payload = {
+      type: 'quote_request',
+      timestamp: new Date().toISOString(),
+      customer: {
+        name,
+        phone,
+        email: (document.getElementById('email') as HTMLInputElement)?.value.trim(),
+      },
+      vehicle: {
+        make,
+        model,
+        year: (document.getElementById('year') as HTMLInputElement)?.value.trim(),
+        rego: (document.getElementById('rego') as HTMLInputElement)?.value.trim().toUpperCase(),
+      },
+      service_type: serviceType,
+      description: (document.getElementById('description') as HTMLTextAreaElement)?.value.trim(),
+    };
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok || res.status === 200) {
+        form.classList.add('hidden');
+        success?.classList.remove('hidden');
+      } else {
+        throw new Error(`HTTP ${res.status}`);
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Request My Quote';
+      error?.classList.remove('hidden');
+    }
+  });
+</script>

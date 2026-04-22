@@ -10,7 +10,8 @@ const nav = [
   { href: '/', label: 'Home' },
   { href: '/services/', label: 'Services' },
   { href: '/about/', label: 'About' },
-  { href: '/contact/', label: 'Contact' }
+  { href: '/contact/', label: 'Contact' },
+  { href: '/quote/', label: 'Get a Quote' }
 ];
 ---
 
@@ -35,14 +36,15 @@ const nav = [
       <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-6 lg:gap-8" aria-label="Main navigation">
         {nav.map(({ href, label }) => (
-          <a
-            href={href}
-            class={`text-sm font-medium transition-colors hover:text-[#E31E24] ${
-              currentPage === href ? 'text-[#E31E24]' : 'text-gray-300'
-            }`}
-          >
-            {label}
-          </a>
+          label === 'Get a Quote'
+            ? <a href={href} class={`text-sm font-bold px-4 py-1.5 rounded-lg border-2 transition-colors ${
+                currentPage === href
+                  ? 'border-[#E31E24] text-[#E31E24]'
+                  : 'border-[#E31E24] text-[#E31E24] hover:bg-[#E31E24] hover:text-white'
+              }`}>{label}</a>
+            : <a href={href} class={`text-sm font-medium transition-colors hover:text-[#E31E24] ${
+                currentPage === href ? 'text-[#E31E24]' : 'text-gray-300'
+              }`}>{label}</a>
         ))}
       </nav>
 
