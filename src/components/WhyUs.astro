@@ -12,50 +12,42 @@ const pointIcons = [
 ];
 ---
 
-<section class="py-16 lg:py-24 bg-[#1A1A1A] relative overflow-hidden" aria-label="Why choose Corney's">
+<section class="py-20 lg:py-28 bg-[#F5F5F5]" aria-label="Why choose Corney's">
 
-  <!-- Subtle diagonal pattern background -->
-  <div class="absolute inset-0 opacity-[0.03]" style="background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.8) 0, rgba(255,255,255,0.8) 1px, transparent 0, transparent 50%); background-size: 12px 12px;"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <div class="text-center mb-12 reveal">
-      <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-2">{whyUs.tagline}</p>
-      <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+    <div class="max-w-2xl mb-14 lg:mb-16">
+      <p class="text-[#E31E24] font-semibold text-xs uppercase tracking-[0.2em] mb-3">{whyUs.tagline}</p>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1A1A1A] leading-tight">
         {whyUs.heading}
       </h2>
-      <span class="accent-line mx-auto"></span>
-      <p class="mt-4 text-gray-400 text-lg max-w-xl mx-auto">
+      <p class="mt-5 text-gray-600 text-lg leading-relaxed">
         {whyUs.subtext}
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {whyUs.points.map((point, i) => (
-        <div
-          class="why-card reveal group bg-[#222222] rounded-2xl p-6 border border-[#2E2E2E] hover:border-[#E31E24]/50 hover:bg-[#252525] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
-          style={`transition-delay: ${i * 80}ms`}
-        >
-          <!-- Icon -->
-          <div class="w-14 h-14 rounded-xl bg-[#E31E24]/10 border border-[#E31E24]/20 flex items-center justify-center text-[#E31E24] mb-5 group-hover:bg-[#E31E24]/20 group-hover:border-[#E31E24]/40 transition-all duration-300" set:html={pointIcons[i]} />
+        <div class="group bg-white rounded-2xl p-7 border border-gray-200 hover:border-[#E31E24]/40 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-xl bg-[#E31E24]/10 flex items-center justify-center text-[#E31E24] mb-5 group-hover:bg-[#E31E24]/15 transition-all duration-300" set:html={pointIcons[i]} />
 
-          <h3 class="font-semibold text-white text-base mb-3 leading-tight">{point.title}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">{point.desc}</p>
+          <h3 class="font-semibold text-[#1A1A1A] text-base lg:text-lg mb-3 leading-tight">{point.title}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{point.desc}</p>
         </div>
       ))}
     </div>
 
     <!-- Google reviews mention -->
-    <div class="mt-12 text-center reveal">
-      <div class="inline-flex items-center gap-3 bg-[#222222] border border-[#2E2E2E] rounded-full px-6 py-3">
-        <span class="text-[#E31E24] text-lg">★★★★★</span>
-        <span class="text-gray-400 text-sm">
+    <div class="mt-14 text-center">
+      <div class="inline-flex items-center gap-3 bg-white border border-gray-200 rounded-full px-6 py-3 shadow-sm">
+        <span class="text-[#E31E24] text-lg tracking-tight">★★★★★</span>
+        <span class="text-gray-700 text-sm">
           Rated 5 stars by Taree locals —
           <a
             href={siteContent.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="text-[#E31E24] font-medium hover:underline ml-1"
+            class="text-[#E31E24] font-semibold hover:underline ml-1"
           >
             See Google Reviews
           </a>

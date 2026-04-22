@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import StatsBar from '../components/StatsBar.astro';
+import TrustBar from '../components/TrustBar.astro';
 import AirconCallout from '../components/AirconCallout.astro';
 import ServicesGrid from '../components/ServicesGrid.astro';
 import HowItWorks from '../components/HowItWorks.astro';
@@ -25,32 +26,35 @@ import MobileCTABar from '../components/MobileCTABar.astro';
     <!-- 1. Hero -->
     <Hero />
 
-    <!-- 2. Stats bar (credibility) -->
+    <!-- 2. Stats bar (credibility metrics, dark) -->
     <StatsBar />
 
-    <!-- 3. ARCtick / AC callout — the single biggest competitive edge -->
-    <AirconCallout />
+    <!-- 3. Trust bar (white, scannable credentials — JAX/Natrad-style) -->
+    <TrustBar />
 
-    <!-- 4. Services grid -->
+    <!-- 4. Services grid — clean white cards -->
     <ServicesGrid
-      title="Everything Your Car Needs, Under One Roof"
-      subtitle="Logbook servicing, brakes, AC, pink slips, blue slips, defect clearances — all handled in-house in Taree."
+      title="Everything your car needs, under one roof."
+      subtitle="Logbook servicing, brakes, air conditioning, pink slips, blue slips, defect clearances — all handled in-house in Taree."
     />
 
-    <!-- 5. Why Us -->
+    <!-- 5. ARCtick / AC callout — the single biggest competitive edge (contrast break) -->
+    <AirconCallout />
+
+    <!-- 6. Why Us — credential cards on light grey -->
     <WhyUs />
 
-    <!-- 6. Testimonials -->
+    <!-- 7. Testimonials — white bg, rating summary -->
     <Testimonials />
 
-    <!-- 7. How It Works + CTA -->
+    <!-- 8. How It Works + CTA -->
     <HowItWorks />
     <BookingCTA
       heading="Book in. Drop it off. Drive away fixed."
       subtext="Same-week bookings in most cases. Honest quote before any work starts. Your car handled properly."
     />
 
-    <!-- 8. Location -->
+    <!-- 9. Location -->
     <Location />
   </main>
   <Footer />

@@ -17,18 +17,21 @@ const hero = homeContent.hero;
   <!-- Subtle grid texture overlay -->
   <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
 
-  <!-- Animated logo — right side (desktop only, strictly hidden on mobile) -->
+  <!-- Clean static logo — right side (desktop only). The animated SVG
+       has been removed because Arial Black cross-browser font metrics
+       desync the gear from the wordmark. The hero PNG is the correct
+       authoritative lockup and always renders cleanly. -->
   <div
     id="hero-gear"
-    style="display:none"
-    class="absolute right-[2%] top-1/2 -translate-y-1/2 w-[480px] xl:w-[580px] pointer-events-none select-none opacity-0"
+    class="hidden lg:flex absolute right-[3%] top-1/2 -translate-y-1/2 w-[460px] xl:w-[560px] pointer-events-none select-none items-center justify-center"
     aria-hidden="true"
   >
     <img
-      src="/logos/logo-animated.svg"
+      src="/logos/logo-hero-transparent.png"
       alt=""
-      class="w-full drop-shadow-2xl"
-      loading="lazy"
+      class="w-full h-auto drop-shadow-2xl opacity-90"
+      loading="eager"
+      decoding="async"
     />
   </div>
 
@@ -132,15 +135,13 @@ const hero = homeContent.hero;
     .from('#hero-ctas', { y: 12 }, 0.7)
     .to('#hero-badges', { opacity: 1, duration: 0.5, ease: 'power2.out' }, 0.9);
 
-  // Logo fade in — desktop only (lg breakpoint = 1024px)
+  // Hero logo fade-in (desktop only). The element is already visible via
+  // Tailwind; we just do a gentle opacity lift.
   const gear = document.getElementById('hero-gear');
   if (gear && window.innerWidth >= 1024) {
-    gear.style.display = 'flex';
-    gsap.to('#hero-gear', {
-      opacity: 1,
-      duration: 1.4,
-      delay: 0.6,
-      ease: 'power2.inOut'
-    });
+    gsap.fromTo('#hero-gear',
+      { opacity: 0, scale: 0.96 },
+      { opacity: 0.9, scale: 1, duration: 1.1, delay: 0.3, ease: 'power2.out' }
+    );
   }
 </script>

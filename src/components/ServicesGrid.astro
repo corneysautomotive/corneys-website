@@ -103,50 +103,57 @@ const services = [
 const displayServices = showAll ? services : services.filter(s => !s.homeHidden).slice(0, 8);
 ---
 
-<section class="py-16 lg:py-24 bg-white" id="services-overview" aria-label="Our services">
+<section class="py-20 lg:py-28 bg-white" id="services-overview" aria-label="Our services">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
-    <div class="text-center mb-12 reveal">
-      <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-2">Our Services</p>
-      <h2 class="font-display text-3xl sm:text-4xl font-bold text-[#1A1A1A]">{title}</h2>
-      <span class="accent-line mx-auto"></span>
-      <p class="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">{subtitle}</p>
+    <!-- Section header — left-aligned, JAX-style -->
+    <div class="max-w-2xl mb-14 lg:mb-16">
+      <p class="text-[#E31E24] font-semibold text-xs uppercase tracking-[0.2em] mb-3">Our Services</p>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1A1A1A] leading-tight">{title}</h2>
+      <p class="mt-5 text-gray-600 text-lg leading-relaxed">{subtitle}</p>
     </div>
 
-    <!-- Services grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <!-- Services grid — clean white cards, generous spacing -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {displayServices.map((service) => (
         <a
           href={service.href}
-          class={`service-card-reveal group flex gap-4 p-6 rounded-xl border transition-all duration-300 hover:shadow-xl hover:border-[#E31E24] hover:-translate-y-1 hover:shadow-[#E31E24]/5 bg-white ${
-            service.highlight ? '' : 'border-gray-200'
+          class={`service-card-reveal group relative flex flex-col p-7 rounded-2xl border bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+            service.highlight ? 'border-[#E31E24]/30 hover:border-[#E31E24]' : 'border-gray-200 hover:border-[#E31E24]/60'
           }`}
-          style={service.highlight ? 'border: 2px solid #E31E24;' : undefined}
         >
-          <div class={`shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#E31E24] transition-all duration-300 group-hover:scale-110 ${
-            service.highlight ? 'bg-[#E31E24]/10 group-hover:bg-[#E31E24]/20' : 'bg-[#F5F5F5] group-hover:bg-[#E31E24]/10'
+          {service.highlight && service.badge && (
+            <span class="absolute top-5 right-5 text-[10px] font-bold text-[#E31E24] uppercase tracking-wider bg-[#E31E24]/10 px-2 py-1 rounded">{service.badge}</span>
+          )}
+
+          <div class={`w-14 h-14 rounded-xl flex items-center justify-center text-[#E31E24] mb-5 transition-all duration-300 group-hover:scale-105 ${
+            service.highlight ? 'bg-[#E31E24]/10' : 'bg-[#F5F5F5] group-hover:bg-[#E31E24]/10'
           }`}
             set:html={service.icon}
           />
-          <div class="min-w-0">
-            <h3 class="font-semibold text-[#1A1A1A] text-sm mb-1.5 group-hover:text-[#E31E24] transition-colors duration-300">
-              {service.name}
-              {service.highlight && service.badge && <span class="ml-2 text-[10px] font-bold text-[#E31E24] uppercase tracking-wide bg-[#E31E24]/10 px-1.5 py-0.5 rounded">{service.badge}</span>}
-            </h3>
-            <p class="text-gray-500 text-xs leading-relaxed">{service.desc}</p>
-          </div>
+
+          <h3 class="font-semibold text-[#1A1A1A] text-lg mb-2 leading-tight group-hover:text-[#E31E24] transition-colors duration-300">
+            {service.name}
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5">{service.desc}</p>
+
+          <span class="mt-auto inline-flex items-center gap-1.5 text-[#E31E24] text-sm font-semibold">
+            Find out more
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
         </a>
       ))}
     </div>
 
     {!showAll && (
-      <div class="text-center mt-10 reveal">
+      <div class="mt-14 text-center">
         <a
           href="/services/"
-          class="inline-flex items-center gap-2 text-[#E31E24] font-semibold hover:underline"
+          class="inline-flex items-center gap-2 bg-[#1A1A1A] hover:bg-black text-white font-semibold px-7 py-3.5 rounded-lg transition-all hover:scale-[1.02]"
         >
-          View all 13 services
+          View all services
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>

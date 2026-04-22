@@ -14,47 +14,56 @@ function getInitial(name: string) {
 }
 ---
 
-<section class="py-16 lg:py-24 bg-[#F5F5F5]" aria-label="Customer testimonials">
+<section class="py-20 lg:py-28 bg-white" aria-label="Customer testimonials">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
-    <div class="text-center mb-12 reveal">
-      <p class="text-[#E31E24] font-semibold text-sm uppercase tracking-widest mb-2">{testimonials.tagline}</p>
-      <h2 class="font-display text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
-        {testimonials.heading}
-      </h2>
-      <span class="accent-line mx-auto"></span>
-      <p class="mt-4 text-gray-600 text-lg max-w-xl mx-auto">
-        {testimonials.subtext}
-      </p>
+    <!-- Section header with rating summary on the right (JAX-style) -->
+    <div class="mb-14 lg:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div class="max-w-2xl">
+        <p class="text-[#E31E24] font-semibold text-xs uppercase tracking-[0.2em] mb-3">{testimonials.tagline}</p>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1A1A1A] leading-tight">
+          {testimonials.heading}
+        </h2>
+        <p class="mt-5 text-gray-600 text-lg leading-relaxed">
+          {testimonials.subtext}
+        </p>
+      </div>
+
+      <!-- Rating summary card -->
+      <div class="shrink-0 bg-[#F5F5F5] border border-gray-200 rounded-2xl px-6 py-5 flex items-center gap-5">
+        <div>
+          <div class="font-display text-4xl font-extrabold text-[#1A1A1A] leading-none">5.0</div>
+          <div class="text-[#E31E24] text-base tracking-tight mt-1">★★★★★</div>
+        </div>
+        <div class="text-sm text-gray-600 leading-snug">
+          <div class="font-semibold text-[#1A1A1A]">Google Reviews</div>
+          <div>Rated by Taree<br/>drivers and beyond</div>
+        </div>
+      </div>
     </div>
 
     <!-- Reviews grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {testimonials.reviews.map((review, i) => (
-        <div
-          class="testimonial-card reveal bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#E31E24]/20 transition-all duration-300 hover:-translate-y-1"
-          style={`transition-delay: ${i * 60}ms`}
-        >
+      {testimonials.reviews.map((review) => (
+        <div class="bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-xl hover:border-[#E31E24]/30 transition-all duration-300 hover:-translate-y-1">
           <!-- Stars -->
-          <div class="text-[#E31E24] text-xl mb-4 tracking-tight" aria-label={`${review.stars} out of 5 stars`}>
+          <div class="text-[#E31E24] text-lg mb-4 tracking-tight" aria-label={`${review.stars} out of 5 stars`}>
             {renderStars(review.stars)}
           </div>
 
           <!-- Quote text -->
-          <blockquote class="text-gray-600 text-sm leading-relaxed mb-5 italic">
-            "{review.text}"
+          <blockquote class="text-gray-700 text-[15px] leading-relaxed mb-6">
+            “{review.text}”
           </blockquote>
 
           <!-- Reviewer info -->
-          <div class="flex items-center gap-3">
-            <!-- Avatar circle -->
+          <div class="flex items-center gap-3 pt-5 border-t border-gray-100">
             <div class="w-10 h-10 rounded-full bg-[#E31E24] flex items-center justify-center text-white font-bold text-sm shrink-0">
               {getInitial(review.name)}
             </div>
             <div>
               <div class="font-semibold text-[#1A1A1A] text-sm">{review.name}</div>
-              <div class="text-gray-400 text-xs">{review.vehicle} · {review.location}</div>
+              <div class="text-gray-500 text-xs">{review.vehicle} · {review.location}</div>
             </div>
           </div>
         </div>
@@ -62,7 +71,7 @@ function getInitial(name: string) {
     </div>
 
     <!-- Google review link -->
-    <div class="text-center mt-10 reveal">
+    <div class="text-center mt-12">
       <a
         href={siteContent.googleMapsUrl}
         target="_blank"

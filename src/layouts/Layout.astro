@@ -115,6 +115,14 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
       html.js-ready .service-card-reveal {
         transform: translateY(24px);
       }
+      /* Once reveals have finished (or failsaved), force everything visible
+         regardless of ScrollTrigger state. This is the last line of defence
+         against invisible sections from mis-fired scroll triggers. */
+      html.reveals-done .reveal,
+      html.reveals-done .service-card-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
       /*
         Override Tailwind's .opacity-0 when JS isn't ready. Without this,
         a GSAP failure leaves hero headline/subtext/CTAs invisible on mobile.
@@ -148,7 +156,8 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
       // If this line never runs (GSAP failed to load), everything stays visible.
       document.documentElement.classList.add('js-ready');
 
-      // Scroll reveals
+      // Scroll reveals — start just below the fold so above-the-fold reveals
+      // fire immediately on load instead of waiting for a user scroll.
       gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
         gsap.to(el, {
           opacity: 1,
@@ -157,7 +166,7 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
           ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
+            start: 'top 95%',
             once: true
           }
         });
@@ -173,11 +182,23 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
           delay: i * 0.03,
           scrollTrigger: {
             trigger: el,
-            start: 'top 95%',
+            start: 'top 98%',
             once: true
           }
         });
       });
+
+      // Failsafe: if any reveal element is still invisible after 2s (e.g.
+      // scroll trigger refresh race on fullPage screenshot / SEO crawler /
+      // weird viewport), force everything visible. This is a guarantee that
+      // the page can never end up with empty sections.
+      setTimeout(() => {
+        document.documentElement.classList.add('reveals-done');
+      }, 2000);
+
+      // And refresh ScrollTrigger once fonts/images settle — fixes the case
+      // where initial layout shifts cause triggers to miss.
+      window.addEventListener('load', () => ScrollTrigger.refresh());
 
       // Sticky header
       const header = document.getElementById('site-header');
