@@ -4,29 +4,44 @@
     "headlineLine1": "Your Car Fixed",
     "headlineEmphasis": "Properly.",
     "headlineLine2": "First Time.",
-    "subtext": "Taree's locally owned workshop. Honest quotes, quality work, and a phone call when your car is ready — not a generic text. No upselling. No surprises.",
+    "subtext": "Taree's locally owned and trusted workshop. Honest quotes, quality work, and a customer focus. No upselling. No surprises.",
     "badges": [
       "Licensed & insured",
-      "All makes & models",
+      "Air Conditioning",
       "Pink & blue slips",
       "Warranty-safe servicing"
     ]
   },
   "stats": [
-    { "value": "20+", "label": "Years Serving Taree" },
-    { "value": "5,000+", "label": "Happy Customers" },
-    { "value": "100%", "label": "Locally Owned" },
-    { "value": "Same Day", "label": "Service Available" },
-    { "value": "All Makes", "label": "& Models" }
+    {
+      "value": "20+",
+      "label": "Years Serving Taree"
+    },
+    {
+      "value": "5,000+",
+      "label": "Happy Customers"
+    },
+    {
+      "value": "100%",
+      "label": "Locally Owned"
+    },
+    {
+      "value": "Same Day",
+      "label": "Service Available"
+    },
+    {
+      "value": "All Makes",
+      "label": "& Models"
+    }
   ],
   "whyUs": {
     "tagline": "Why Choose Us",
     "heading": "The Taree Mechanic That Does It Right",
-    "subtext": "We built this workshop on one principle: do the job properly and treat people with respect.",
+    "subtext": "We built this workshop on one principle: do the job properly, efficiently and treat people with respect.",
     "points": [
       {
         "title": "Family Owned & Operated",
-        "desc": "We're not a franchise. We're a local Taree family business. When you deal with us, you deal with the people who actually work on your car."
+        "desc": "We're not a franchise. We're a local Taree family business. When you deal with us, you deal with the people who care and do the work on your car."
       },
       {
         "title": "Straight Talk, No Surprises",
@@ -59,8 +74,8 @@
       },
       {
         "number": "03",
-        "title": "Pick It Up Fixed",
-        "desc": "We'll call you when it's done. Your car is fixed properly, you know exactly what was done and why, and you're back on the road."
+        "title": "Pick It Up",
+        "desc": "We'll message you when it's done. Your car is fixed properly, you know exactly what was done and why, and you're back on the road."
       }
     ]
   },
