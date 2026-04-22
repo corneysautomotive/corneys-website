@@ -88,6 +88,8 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
     </script>
 
     <title>{title}</title>
+    <!-- Safety: ensure body is always visible even if JS fails -->
+    <style>body { opacity: 1 !important; }</style>
   </head>
   <body>
     <slot />
@@ -99,8 +101,8 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
 
       gsap.registerPlugin(ScrollTrigger);
 
-      // Page entrance
-      gsap.from('body', { opacity: 0, duration: 0.4, ease: 'power2.out' });
+      // Page entrance — subtle fade in
+      gsap.from('body', { opacity: 0, duration: 0.3, ease: 'power2.out' });
 
       // Scroll reveals
       gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
