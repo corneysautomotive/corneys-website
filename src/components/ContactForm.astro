@@ -127,6 +127,23 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_ID";
         ></textarea>
       </div>
 
+      <!-- Consent -->
+      <div class="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="consent"
+          name="consent"
+          required
+          class="mt-1 h-4 w-4 rounded border-gray-300 text-[#E31E24] focus:ring-[#E31E24] shrink-0"
+        />
+        <label for="consent" class="text-xs text-gray-500 leading-relaxed">
+          By submitting this form I agree to Corney's Automotive Services'
+          <a href="/privacy/" class="text-[#E31E24] hover:underline" target="_blank">Privacy Policy</a>
+          and
+          <a href="/terms/" class="text-[#E31E24] hover:underline" target="_blank">Terms & Conditions</a>.
+        </label>
+      </div>
+
       <!-- Submit -->
       <button
         type="submit"
