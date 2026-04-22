@@ -23,11 +23,86 @@ const hero = homeContent.hero;
     class="absolute right-[2%] top-1/2 -translate-y-1/2 w-[420px] h-[420px] lg:w-[520px] lg:h-[520px] pointer-events-none select-none hidden md:flex items-center justify-center"
     aria-hidden="true"
   >
+    <!-- Official Corney's logo — mix-blend-mode:screen removes black background in real browsers -->
     <img
-      src="/logos/logo-animated.svg"
-      alt="Corney's Automotive"
-      class="w-full max-w-sm mx-auto"
+      src="/logos/logo-dark-official.png"
+      alt="Corney's Automotive Services"
+      class="w-full h-full object-contain"
+      style="mix-blend-mode:screen;"
     />
+    <svg
+      id="gear-svg"
+      viewBox="0 0 400 400"
+      class="w-full h-full"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <filter id="gearGlow" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+        <filter id="innerGlow" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+        <!-- Metallic gradient — light from top, dark at bottom like real logo -->
+        <linearGradient id="gearGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#A0A0A0"/>
+          <stop offset="35%" stop-color="#707070"/>
+          <stop offset="70%" stop-color="#404040"/>
+          <stop offset="100%" stop-color="#222222"/>
+        </linearGradient>
+        <linearGradient id="toothGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#B0B0B0"/>
+          <stop offset="40%" stop-color="#808080"/>
+          <stop offset="100%" stop-color="#303030"/>
+        </linearGradient>
+        <radialGradient id="hubGrad" cx="40%" cy="35%" r="60%">
+          <stop offset="0%" stop-color="#888888"/>
+          <stop offset="60%" stop-color="#444444"/>
+          <stop offset="100%" stop-color="#1A1A1A"/>
+        </radialGradient>
+      </defs>
+
+      <!-- 9-tooth chunky gear matching real Corney's logo -->
+      <g id="gear-main">
+        <!-- Main gear body -->
+        <circle cx="200" cy="200" r="128" fill="url(#gearGrad)" stroke="#555" stroke-width="2"/>
+
+        <!-- 9 chunky trapezoidal teeth — wide and blocky like the real logo -->
+        <g fill="url(#toothGrad)" stroke="#555" stroke-width="1.5">
+          <g transform="rotate(0 200 200)">  <path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(40 200 200)"> <path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(80 200 200)"> <path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(120 200 200)"><path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(160 200 200)"><path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(200 200 200)"><path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(240 200 200)"><path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(280 200 200)"><path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+          <g transform="rotate(320 200 200)"><path d="M182 72 L218 72 L222 44 L178 44 Z"/></g>
+        </g>
+
+        <!-- Outer ring highlight -->
+        <circle cx="200" cy="200" r="128" fill="none" stroke="#777" stroke-width="1"/>
+        <!-- Inner ring -->
+        <circle cx="200" cy="200" r="105" fill="none" stroke="#444" stroke-width="1.5"/>
+
+        <!-- Hub -->
+        <circle cx="200" cy="200" r="68" fill="url(#hubGrad)" stroke="#555" stroke-width="2"/>
+
+        <!-- Red accent ring — matches real logo -->
+        <circle cx="200" cy="200" r="58" fill="none" stroke="#E31E24" stroke-width="2.5" opacity="0.85"/>
+
+        <!-- Inner hub detail -->
+        <circle cx="200" cy="200" r="44" fill="#1A1A1A" stroke="#444" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="28" fill="url(#hubGrad)" stroke="#555" stroke-width="1"/>
+
+        <!-- Center bore -->
+        <circle cx="200" cy="200" r="12" fill="#111" stroke="#E31E24" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="5" fill="#E31E24"/>
+      </g>
+    </svg>
   </div>
 
   <!-- Red accent bar left edge -->
@@ -116,6 +191,17 @@ const hero = homeContent.hero;
   </div>
 </section>
 
+<style>
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  #gear-main {
+    transform-origin: 200px 200px;
+    animation: spin-slow 18s linear infinite;
+  }
+</style>
+
 <script>
   import gsap from 'gsap';
 
@@ -133,11 +219,11 @@ const hero = homeContent.hero;
     .from('#hero-ctas', { y: 12 }, 0.5)
     .to('#hero-badges', { opacity: 1, duration: 0.5, ease: 'power2.out' }, 0.7);
 
-  // Animated logo fade in
+  // Gear fade in
   gsap.to('#hero-gear', {
     opacity: 1,
-    duration: 1.2,
-    delay: 0.4,
+    duration: 1.5,
+    delay: 0.5,
     ease: 'power2.inOut'
   });
 </script>
