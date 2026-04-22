@@ -109,6 +109,12 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
       html.js-ready .service-card-reveal {
         opacity: 0;
       }
+      /* Service cards slide up from 24px; only apply when JS is ready so the
+         animation has somewhere to animate from. If GSAP fails, cards render
+         in their natural position. */
+      html.js-ready .service-card-reveal {
+        transform: translateY(24px);
+      }
       /*
         Override Tailwind's .opacity-0 when JS isn't ready. Without this,
         a GSAP failure leaves hero headline/subtext/CTAs invisible on mobile.
