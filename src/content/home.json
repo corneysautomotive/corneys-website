@@ -4,7 +4,7 @@
     "headlineLine1": "Your car,",
     "headlineEmphasis": "fixed properly.",
     "headlineLine2": "First time.",
-    "subtext": "Mechanical repairs, logbook servicing, pink and blue slips, AC regas \u2014 everything your car needs, at one address in Taree. We quote before we start and call before we spend a dollar more.",
+    "subtext": "Mechanical repairs, logbook servicing, pink and blue slips, AC regas \u2014 everything your car needs, at one address in Taree. We quote before we start, and we call if anything changes so you always know what you're paying.",
     "badges": [
       "20+ years in Taree",
       "All makes & models",
@@ -32,17 +32,17 @@
   ],
   "aircon": {
     "eyebrow": "ARCtick Licensed",
-    "heading": "We can legally regas your AC. Most shops can't.",
-    "subheading": "Australia requires an ARCtick licence to handle automotive refrigerant. Corney's holds one. If your AC isn't cold, we're the closest workshop in Taree that can actually fix it \u2014 not just refer you somewhere else.",
+    "heading": "Automotive air conditioning, done properly.",
+    "subheading": "Corney's holds an ARCtick licence \u2014 the Australian authorisation to handle automotive refrigerant. If your AC isn't cold, bring it in. We'll diagnose it, fix it, and have you back in cool air.",
     "price": "$189",
     "priceLabel": "Fixed-price AC regas",
-    "priceSub": "Standard passenger vehicle \u00b7 All-inclusive \u00b7 No surprises",
+    "priceSub": "Standard passenger vehicle \u00b7 All-inclusive \u00b7 Quoted up front",
     "leakTestPrice": "from $88",
     "leakTestLabel": "Leak test",
-    "leakTestSub": "If your system has lost gas, we find the leak first \u2014 no point regassing a system that'll just lose it again.",
+    "leakTestSub": "If your system has lost gas, we find the leak first so the repair lasts \u2014 then regas once it's sealed.",
     "points": [
       "Licensed to handle all automotive refrigerants (R134a, R1234yf)",
-      "Proper recovery, evacuation and recharge \u2014 not a top-up",
+      "Proper recovery, evacuation and recharge \u2014 to manufacturer spec",
       "Leak diagnosis with UV dye or nitrogen pressure test",
       "Full component repair (compressor, condenser, expansion valve)"
     ],
@@ -56,11 +56,11 @@
     "points": [
       {
         "title": "A Quote Before We Lift a Spanner",
-        "desc": "We diagnose, we call, we quote. Then you decide. No $200 service that mysteriously becomes $800 at pickup."
+        "desc": "We diagnose, we call, we quote. Then you decide. The invoice matches the quote you approved \u2014 always."
       },
       {
-        "title": "Licensed for the Jobs Most Can't Touch",
-        "desc": "ARCtick for AC work. AUVIS for blue slips. NSW authorised for pink slips and defect clearances. One stop \u2014 instead of three."
+        "title": "Licensed Across the Board",
+        "desc": "ARCtick for AC work. AUVIS for blue slips. NSW authorised for pink slips and defect clearances. Everything your car needs, under one roof."
       },
       {
         "title": "Warranty-Safe Logbook Servicing",
@@ -68,7 +68,7 @@
       },
       {
         "title": "The Mechanics Work on Your Car",
-        "desc": "Jarrad, Don and Toby \u2014 the three names on the shop wall \u2014 are the three people holding the spanners. No call centre, no apprentice-only jobs, no finger-pointing."
+        "desc": "Jarrad, Don and Toby \u2014 the three names on the shop wall \u2014 are the three people holding the spanners. You speak to the mechanic doing the job."
       }
     ]
   },
@@ -104,7 +104,7 @@
         "location": "Taree",
         "vehicle": "2018 Toyota Corolla",
         "stars": 5,
-        "text": "Booked in for a logbook service, they called before doing anything extra \u2014 found a cracked rear shock but gave me the option. Done by 4pm, quote matched the bill to the dollar. That's rare."
+        "text": "Booked in for a logbook service, they called before doing anything extra \u2014 found a cracked rear shock but gave me the option. Done by 4pm, quote matched the bill to the dollar. That's exactly how it should be."
       },
       {
         "name": "Dave R.",
@@ -118,28 +118,28 @@
         "location": "Old Bar",
         "vehicle": "2019 Mazda CX-5",
         "stars": 5,
-        "text": "AC had been weak for ages. Every other shop wanted to just 'top it up' \u2014 Corney's did a proper leak test, found a bad O-ring on the condenser, fixed it and regassed. Ice cold since. $189 regas plus the repair \u2014 no upsell, no games."
+        "text": "AC had been weak for ages. Corney's did a proper leak test, found a bad O-ring on the condenser, fixed it and regassed. Ice cold since. $189 regas plus the repair \u2014 quoted up front, exactly as promised."
       },
       {
         "name": "Tom K.",
         "location": "Wingham",
         "vehicle": "2016 Holden Colorado",
         "stars": 5,
-        "text": "Pink slip done in under an hour. They flagged a CV boot starting to split \u2014 not a fail, but warned me before it became one. That's the kind of heads-up you only get from a mechanic who's not trying to fleece you."
+        "text": "Pink slip done in under an hour. They flagged a CV boot starting to split \u2014 not a fail, but warned me before it became one. That's the kind of heads-up you get from mechanics who care about doing the job right."
       },
       {
         "name": "Karen B.",
         "location": "Taree",
         "vehicle": "2021 Hyundai Tucson",
         "stars": 5,
-        "text": "New-car warranty means I had to stick to the logbook. Corney's used the right oil, the right filter, stamped the book, emailed me the invoice. Warranty intact, half the price of the dealer in Newcastle."
+        "text": "New-car warranty means I had to stick to the logbook. Corney's used the right oil, the right filter, stamped the book, emailed me the invoice. Warranty intact and a great result."
       },
       {
         "name": "James L.",
         "location": "Forster",
         "vehicle": "2017 Toyota HiLux",
         "stars": 5,
-        "text": "Interstate plates, rego expired. Needed a blue slip before I could re-register. Corney's are an AUVIS station so it was one visit instead of two. Straight, fast, sorted."
+        "text": "Interstate plates, rego expired. Needed a blue slip before I could re-register. Corney's are an AUVIS station so it was a simple one-visit job. Straight, fast, sorted."
       }
     ]
   }

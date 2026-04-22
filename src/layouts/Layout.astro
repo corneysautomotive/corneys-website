@@ -88,8 +88,44 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
     </script>
 
     <title>{title}</title>
-    <!-- Safety: ensure body is always visible even if JS fails -->
-    <style>body { opacity: 1 !important; }</style>
+    <!--
+      JS-failure safety net: reveal elements are visible by default.
+      GSAP overrides these to opacity:0 and animates them in. If GSAP
+      fails for any reason, content remains readable.
+    -->
+    <!--
+      is:global is REQUIRED here. Without it, Astro scopes these selectors
+      with a data-astro-cid attribute tied to Layout.astro, which means they
+      don't match elements inside child components (Hero, ServicesGrid, etc.)
+      because those have their own component-scoped cid attributes.
+    -->
+    <style is:global>
+      /*
+        Scroll-reveal / hero elements: visible by default; JS-enabled clients
+        opt in to the animated hidden state. If GSAP fails (network, timeout,
+        error), nothing ever becomes invisible.
+      */
+      html.js-ready .reveal,
+      html.js-ready .service-card-reveal {
+        opacity: 0;
+      }
+      /*
+        Override Tailwind's .opacity-0 when JS isn't ready. Without this,
+        a GSAP failure leaves hero headline/subtext/CTAs invisible on mobile.
+        Once html.js-ready is set, Tailwind's .opacity-0 takes effect normally
+        and GSAP animates to opacity:1.
+      */
+      html:not(.js-ready) .opacity-0 { opacity: 1 !important; }
+      /* Never start the page invisible at the body level. */
+      body { opacity: 1; }
+    </style>
+    <!--
+      We intentionally do NOT add html.js-ready here. The GSAP module script
+      below adds it only once GSAP has actually loaded and initialised. That
+      means: if GSAP fails to load (network error, CSP block, parse error,
+      slow mobile network, anything), html.js-ready is never set and every
+      .opacity-0 / .reveal element remains visible via the CSS override above.
+    -->
   </head>
   <body>
     <slot />
@@ -101,8 +137,10 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
 
       gsap.registerPlugin(ScrollTrigger);
 
-      // Page entrance — subtle fade in
-      gsap.from('body', { opacity: 0, duration: 0.3, ease: 'power2.out' });
+      // GSAP loaded successfully — now it's safe to allow elements to start
+      // hidden so the reveal animations have something to animate from.
+      // If this line never runs (GSAP failed to load), everything stays visible.
+      document.documentElement.classList.add('js-ready');
 
       // Scroll reveals
       gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {

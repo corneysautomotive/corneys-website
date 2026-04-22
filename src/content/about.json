@@ -2,7 +2,7 @@
   "hero": {
     "tagline": "Who We Are",
     "heading": "A family workshop. Three mechanics. 20 years.",
-    "subtext": "Corney's isn't a franchise and it isn't a chain. Jarrad, Don and Toby are the three people who will actually work on your car. That's the whole operation — and that's the point."
+    "subtext": "Corney's is a family-run workshop in the heart of Taree. Jarrad, Don and Toby are the three people who will actually work on your car. That's the whole operation — and that's the point."
   },
   "story": {
     "heading": "Taree's workshop, built on trust and done right.",
@@ -10,9 +10,9 @@
       "The workshop",
       "Don Corney opened the doors in Taree more than 20 years ago. Jarrad grew up in the shop — passing tools, then using them, then running the place. Toby Carter's been on the spanners alongside us for years. Between the three of us we handle everything from logbook servicing on a new hatchback to blue slips on an interstate ute, AC regas to defect clearances, brakes to timing belts.",
       "What you actually get",
-      "An honest quote before any work starts. A phone call if anything changes. Your car ready when we said it would be. An invoice that matches the quote. No padding, no pressure, no mystery charges at pickup. The job done properly the first time — and if it isn't, you bring it back and we fix it.",
+      "An honest quote before any work starts. A phone call if anything changes. Your car ready when we said it would be. An invoice that matches the quote. The job done properly the first time — and if it isn't, you bring it back and we fix it.",
       "The credentials that matter",
-      "We're one of the few workshops in the Mid North Coast licensed across all four major authorities you'd actually want: ARCtick (automotive refrigerant), AUVIS (blue slip inspections), eSafety (pink slips), and authorised defect-clearance repairer. That means you don't have to chase three different places for different jobs. One visit, one invoice, one mechanic who knows your car.",
+      "We hold the full set of licences and authorisations you'd want from a workshop: ARCtick (automotive refrigerant), AUVIS (blue slip inspections), eSafety (pink slips), and authorised defect-clearance repairer. That means we can handle your servicing, your rego checks, your AC work, and your defect clearance all under the one roof.",
       "Local, and staying that way",
       "Most of our work comes from Taree families, tradespeople, fleets and farmers — people who've been coming to us for years and send their kids to us when they get their first car. That's the business. That's what we protect every day. Treat people fairly, do the work properly, and the rest looks after itself."
     ]
@@ -28,7 +28,7 @@
       {
         "emoji": "💰",
         "title": "Priced to match the quote",
-        "desc": "The invoice you get is the quote you agreed to. No last-minute 'oh, and we also did…' at pickup."
+        "desc": "The invoice you get is the quote you agreed to. If anything changes along the way, you hear from us before the work happens."
       },
       {
         "emoji": "🏁",
