@@ -1,12 +1,12 @@
 {
   "hero": {
     "tagline": "What We Do",
-    "heading": "Every service your car needs — in one Taree workshop.",
-    "subtext": "Logbook servicing to blue slips, AC regas to defect clearances. All makes, all models, all handled in-house at 16 Albert Lane."
+    "heading": "Every service your car needs — in one workshop.",
+    "subtext": " "
   },
   "bookingCta": {
     "heading": "Not sure what you need? Just call.",
-    "subtext": "Two minutes on the phone usually sorts it. (02) 6552 6131 — Mon–Fri 8:30am–4:30pm."
+    "subtext": "Trusted technicians to sort it. (02) 6552 6131 — Mon–Fri 8:30am–4:30pm."
   },
   "services": [
     {
@@ -19,12 +19,12 @@
       "highlight": false
     },
     {
-      "id": "general",
-      "name": "General Servicing & Repairs",
+      "id": "Major",
+      "name": "Major Repairs",
       "emoji": "🔧",
-      "summary": "Routine servicing, mechanical repairs, and everything between — done right the first time.",
-      "body": "Regular servicing is the cheapest insurance you'll ever buy for your car. An $80 oil and filter change at the right interval prevents a $4,000 engine rebuild. Fresh spark plugs save real fuel. A clean air filter protects the engine.\n\nWe handle full servicing and mechanical repairs across every make and model — from the basic interval service through to timing belts, clutches, head gaskets and beyond. We tell you what's genuinely due, what can safely wait, and what's urgent. You only pay for work you've approved.\n\nIf we find something mid-job that wasn't in the quote, we stop and call you. Nothing gets done without your say-so.",
-      "cta": "Book a Service",
+      "summary": "Timing belts, head gaskets, clutches, engine and gearbox replacements. Major mechanical work carried out in-house by our qualified technicians.",
+      "body": "Some repairs go beyond a routine service. Timing belts, head gaskets, clutches, engines and gearboxes are significant jobs that need to be diagnosed accurately and repaired properly the first time.\n\nWe carry out the full scope of major repairs. Our licensed technicians assess the full extent of the repair, explain what's involved, and carry out the work to a high standard. Whether it's a clutch replacement or a full engine rebuild, the process is the same — thorough, methodical, and done right.",
+      "cta": "Request a Quote",
       "highlight": false
     },
     {
@@ -40,8 +40,8 @@
       "id": "suspension",
       "name": "Suspension & Steering",
       "emoji": "🚗",
-      "summary": "Shocks, struts, ball joints, and wheel alignments — if it affects how your car handles, we fix it.",
-      "body": "A worn suspension doesn't just make for an uncomfortable ride — it affects your car's handling, tyre wear, and ability to brake in an emergency. Worn ball joints, broken springs, or tired shock absorbers can make a vehicle genuinely unsafe.\n\nSigns you might need suspension or steering work: your car bounces excessively after a bump, you feel every pothole through the steering wheel, your tyres are wearing unevenly, or the car pulls to one side.\n\nWe inspect and replace shock absorbers, struts, ball joints, tie rod ends, CV joints, and steering components. We also perform wheel alignments to ensure your tyres are running true and your handling is spot-on.",
+      "summary": "Shocks, struts, and ball joints — if it affects how your car handles, we fix it.",
+      "body": "A worn suspension doesn't just make for an uncomfortable ride — it affects your car's handling, tyre wear, and ability to brake in an emergency. Worn ball joints, broken springs, or tired shock absorbers can make a vehicle genuinely unsafe.\n\nSigns you might need suspension or steering work: your car bounces excessively after a bump, you feel every pothole through the steering wheel, your tyres are wearing unevenly, or the car pulls to one side.\n\nWe inspect and replace shock absorbers, struts, ball joints, tie rod ends, CV joints, and steering components. ",
       "cta": "Book a Suspension Check",
       "highlight": false
     },
@@ -49,18 +49,27 @@
       "id": "aircon",
       "name": "Air Conditioning (ARCtick Licensed)",
       "emoji": "❄️",
-      "summary": "$189 fixed-price regas. Leak tests from $88. ARCtick-licensed, right here in Taree.",
-      "body": "Under Australian law, handling automotive refrigerant requires an ARCtick licence. Corney's holds one — the right equipment, the right training, the right paperwork to do the job properly.\n\n**Fixed-price AC regas: $189.** Standard passenger vehicle, all-inclusive. Proper recovery, evacuation and recharge — done to manufacturer specification. For non-standard vehicles, heavy-duty systems or R1234yf (newer refrigerant) we'll quote up front.\n\nIf your AC has lost gas, we find the leak first so the repair actually lasts. **Leak tests from $88** using UV dye or nitrogen pressure — we locate it, quote the fix, and regas once the system is sealed. That way the gas stays in.\n\nWe also handle full AC repairs: compressors, condensers, expansion valves, evaporators, blower motors, bad smells, weak airflow and climate-control faults. Whatever your AC is doing (or not doing), bring it in.",
+      "summary": "AC regas, repairs, and full service — stay cool on those long Taree summers.",
+      "body": "Under Australian law, handling automotive refrigerant requires an ARCtick licence. Corney's holds one — the right equipment, the right training, the right qualifications to do the job properly.\n\n**Fixed-price AC regas: $189.** Standard passenger vehicle, all-inclusive. Proper recovery, evacuation and recharge — done to manufacturer specification. For non-standard vehicles, heavy-duty systems we'll quote up front.\n\nIf your AC has lost gas, we find the leak first so the repair actually lasts. **Leak tests from $88** using nitrogen pressure or UV dye — we locate it, quote the fix, and regas once the system is sealed. That way the gas stays in.\n\nWe also handle full AC repairs: compressors, condensers, expansion valves, evaporators, blower motors, bad smells, weak airflow and climate-control faults. Whatever your AC is doing (or not doing), bring it in.",
       "cta": "Book an AC Service",
       "highlight": true
     },
     {
-      "id": "electrical",
-      "name": "Batteries & Electrical",
+      "id": "Batteries",
+      "name": "Batteries",
       "emoji": "⚡",
-      "summary": "Battery testing, replacement, and electrical fault diagnosis for all vehicles.",
-      "body": "Modern vehicles are heavily dependent on their electrical systems — and when something goes wrong, it's not always obvious what the cause is.\n\nWe handle everything from straightforward battery replacements through to tracking down intermittent electrical faults that have been driving you mad for months. Our diagnostic equipment lets us read your car's control systems to pinpoint exactly where the fault is — so we fix the actual problem the first time.\n\nIf your battery is flat, your alternator isn't charging, a sensor has failed, or there's a short somewhere in the system — bring it to us and we'll sort it.",
-      "cta": "Book an Electrical Check",
+      "summary": "Battery testing and replacement for all vehicles.",
+      "body": "Modern vehicles are heavily dependent on their electrical systems — and when something goes wrong, it's not always obvious what the cause is.\n\nWe handle everything from straightforward battery replacements through to tracking down intermittent electrical faults that have been driving you mad for months. Our diagnostic equipment lets us read your car's control systems  and a technician diagnoses the fault — so we fix the actual problem the first time.\n\nIf your battery is flat, your alternator isn't charging, a sensor has failed, or there's a short somewhere in the system — bring it to us and we'll sort it.",
+      "cta": "Book an Battery Check",
+      "highlight": false
+    },
+    {
+      "id": "prepurchase",
+      "name": "Pre-Purchase Inspections",
+      "emoji": "🔎",
+      "summary": "Buying a used car? Let us check it over before you sign anything — it could save you thousands.",
+      "body": "Buying a used car is one of the biggest purchases most people make — and the risks are real. Hidden rust, accident damage, worn mechanicals, or a flood-affected vehicle can turn a bargain into a money pit very quickly.\n\nA pre-purchase inspection by an independent mechanic is the best $100–$200 you can spend. We'll look over the car thoroughly — checking for rust, oil leaks, tyre condition, brake wear, suspension play, signs of previous accident damage, and anything else that's out of the ordinary.\n\nAt the end of the inspection, we'll give you a plain-English report on the car's condition, anything we'd fix before buying, and a rough estimate of what those repairs would cost. You go into the negotiation — or walk away — with full information.",
+      "cta": "Book a Pre-Purchase Inspection",
       "highlight": false
     },
     {
@@ -86,7 +95,7 @@
       "name": "Pink Slips (eSafety Check)",
       "emoji": "📝",
       "summary": "In plain English: a Pink Slip is the annual safety check you need to renew NSW rego on a vehicle 5+ years old.",
-      "body": "A Pink Slip (formally an eSafety inspection) is required every year when you renew NSW registration on any light vehicle older than 5 years. It confirms the vehicle meets minimum safety standards — brakes, tyres, steering, suspension, lights, wipers, seat belts, windscreen, exhaust and body condition.\n\nWe do them quickly and fairly. Most pink slips are 30–45 minutes. If your vehicle passes, we lodge the eS certificate electronically with Transport for NSW and you can renew your rego the same day.\n\nIf something fails, we explain exactly what — and quote the repair before touching anything. Our job is a safe, legal vehicle back on the road. You leave knowing exactly where you stand.",
+      "body": "A Pink Slip (formally an eSafety inspection) is required every year when you renew NSW registration on any light vehicle older than 5 years. It confirms the vehicle meets minimum safety standards — brakes, tyres, steering, suspension, lights, wipers, seat belts, windscreen, exhaust and body condition.\n\nWe do them quickly and fairly. Most pink slips are 1 Hour. If your vehicle passes, we lodge the eS certificate electronically with Transport for NSW and you can renew your rego the same day.\n\nIf something fails, we explain exactly what — and quote the repair before touching anything. Our job is a safe, legal vehicle back on the road. You leave knowing exactly where you stand.",
       "pricing": {
         "heading": "Pink Slip Pricing (Transport for NSW regulated)",
         "rows": [
@@ -114,7 +123,7 @@
         "bookingLink": "/contact/?service=pinkslip",
         "bookingLabel": "Book a Pink Slip Inspection"
       },
-      "cta": "Book a Pink Slip",
+      "cta": "Book a Pink Slip Inspection",
       "highlight": false
     },
     {
@@ -122,7 +131,7 @@
       "name": "Blue Slips (AUVIS Inspection)",
       "emoji": "🔵",
       "summary": "In plain English: a Blue Slip is the deeper inspection you need to put an unregistered or interstate vehicle on NSW plates.",
-      "body": "A Blue Slip is required in NSW whenever you want to register a vehicle that isn't currently registered in the state — interstate vehicles, vehicles whose rego has lapsed, rebuilt vehicles, or anything that's never been on NSW plates.\n\nIt's more comprehensive than a pink slip. Blue slips are AUVIS (Authorised Unregistered Vehicle Inspection Scheme) inspections: we verify the vehicle's identity (VIN, compliance plates, engine number), confirm it meets NSW vehicle standards, and check it's mechanically safe for the road.\n\n**Corney's is an authorised AUVIS station**, right here in Taree. Once we issue the Blue Slip, you take it to Service NSW to register. Not sure if you need a pink slip or a blue slip? Give us a call, two minutes will sort it.",
+      "body": "A Blue Slip is required in NSW whenever you want to register a vehicle that isn't currently registered in the state — interstate vehicles, vehicles whose rego has lapsed, rebuilt vehicles, or anything that's never been on NSW plates.\n\nIt's more comprehensive than a pink slip. Blue slips are AUVIS (Authorised Unregistered Vehicle Inspection Scheme) inspections: we verify the vehicle's identity (VIN, compliance plates, engine number), confirm it meets NSW vehicle standards, and check it's mechanically safe for the road.\n\n**Corney's is an authorised AUVIS station** Once we issue the Blue Slip, you take it to Service NSW to register. Not sure if you need a pink slip or a blue slip? Give us a call, we can discuss it.",
       "pricing": {
         "heading": "Blue Slip Pricing (Transport for NSW regulated)",
         "rows": [
@@ -162,11 +171,20 @@
       "highlight": true
     },
     {
+      "id": "fleet",
+      "name": "4WD & Fleet Vehicles",
+      "emoji": "🚙",
+      "summary": "From utes and 4WDs to small business fleets — keeping your work vehicles on the road.",
+      "body": "Mid North Coast NSW is 4WD country. Whether you're running a trade ute, a family 4WD, or a small fleet of work vehicles, keeping them serviced and reliable is non-negotiable.\n\nWe service and repair all 4WD and light commercial vehicles — including utes, vans, and SUVs from Toyota, Ford, Mitsubishi, Nissan, Isuzu, and more. We understand that downtime is money for a business, so we work to get your vehicles back to you as quickly as possible.\n\nFleet servicing: if you run multiple vehicles and want a single point of contact for your servicing needs, talk to us about a fleet arrangement. We'll work out a servicing schedule that keeps your vehicles on the road and your costs predictable.",
+      "cta": "Book Fleet Servicing",
+      "highlight": false
+    },
+    {
       "id": "defects",
       "name": "Defect Clearances",
       "emoji": "✅",
-      "summary": "Got a defect notice from police or Transport for NSW? We repair and clear it so you're legal again.",
-      "body": "If you've been stopped by police or an RMS inspector and issued a defect notice, the listed defects need to be repaired and cleared by an authorised repairer before the vehicle is roadworthy again. Leave it unresolved and fines and rego cancellation follow.\n\nCorney's is an authorised defect-clearance workshop. We work through the items on your notice — brakes, tyres, lights, exhaust, suspension, bodywork, modifications — repair what's needed, re-inspect the vehicle, and submit the clearance. Usually back on the road within days, often sooner.\n\nIf you've just been defected and don't know what to do, call us the same day. Priority booking for defect jobs.",
+      "summary": "Received a defect notice from police or Transport for NSW? We repair and clear it so you're legal again.",
+      "body": "If you've been stopped by Police or the Roads and Maritime Service (RMS) inspector and issued a defect notice, the listed defects need to be repaired and then cleared by an authorised repairer before the vehicle is roadworthy again. Leave it unresolved and fines and rego cancellation follow.\n\nCorney's is an authorised defect-clearance workshop. We work through the items on your notice — brakes, tyres, lights, exhaust, suspension, bodywork, modifications — re-inspect the vehicle, and submit the clearance.\n",
       "pricing": {
         "heading": "Defect Clearance Pricing (Transport for NSW regulated)",
         "rows": [
@@ -188,24 +206,6 @@
       },
       "cta": "Book a Defect Clearance",
       "highlight": true
-    },
-    {
-      "id": "prepurchase",
-      "name": "Pre-Purchase Inspections",
-      "emoji": "🔎",
-      "summary": "Buying a used car? Let us check it over before you sign anything — it could save you thousands.",
-      "body": "Buying a used car is one of the biggest purchases most people make — and the risks are real. Hidden rust, accident damage, worn mechanicals, or a flood-affected vehicle can turn a bargain into a money pit very quickly.\n\nA pre-purchase inspection by an independent mechanic is the best $100–$200 you can spend. We'll look over the car thoroughly — checking for rust, oil leaks, tyre condition, brake wear, suspension play, signs of previous accident damage, and anything else that's out of the ordinary.\n\nAt the end of the inspection, we'll give you a plain-English report on the car's condition, anything we'd fix before buying, and a rough estimate of what those repairs would cost. You go into the negotiation — or walk away — with full information.",
-      "cta": "Book a Pre-Purchase Inspection",
-      "highlight": false
-    },
-    {
-      "id": "fleet",
-      "name": "4WD & Fleet Vehicles",
-      "emoji": "🚙",
-      "summary": "From utes and 4WDs to small business fleets — keeping your work vehicles on the road.",
-      "body": "Mid North Coast NSW is 4WD country. Whether you're running a trade ute, a family 4WD, or a small fleet of work vehicles, keeping them serviced and reliable is non-negotiable.\n\nWe service and repair all 4WD and light commercial vehicles — including utes, vans, and SUVs from Toyota, Ford, Mitsubishi, Nissan, Isuzu, and more. We understand that downtime is money for a business, so we work to get your vehicles back to you as quickly as possible.\n\nFleet servicing: if you run multiple vehicles and want a single point of contact for your servicing needs, talk to us about a fleet arrangement. We'll work out a servicing schedule that keeps your vehicles on the road and your costs predictable.",
-      "cta": "Book Fleet Servicing",
-      "highlight": false
     }
   ]
 }
