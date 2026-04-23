@@ -6,6 +6,9 @@ import Location from '../components/Location.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import MobileCTABar from '../components/MobileCTABar.astro';
+import contactContent from '../content/contact.json';
+
+const { hero, howItWorks } = contactContent;
 ---
 
 <Layout
@@ -50,21 +53,13 @@ import MobileCTABar from '../components/MobileCTABar.astro';
           <span class="accent-line mx-auto"></span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div class="reveal text-center">
-            <div class="w-12 h-12 rounded-full bg-[#E31E24] text-white text-xl font-bold flex items-center justify-center mx-auto mb-3">1</div>
-            <h3 class="font-semibold text-[#1A1A1A] mb-1">Call or Message</h3>
-            <p class="text-gray-500 text-sm">Tell us what you need and we'll find a time that works for you.</p>
-          </div>
-          <div class="reveal text-center">
-            <div class="w-12 h-12 rounded-full bg-[#E31E24] text-white text-xl font-bold flex items-center justify-center mx-auto mb-3">2</div>
-            <h3 class="font-semibold text-[#1A1A1A] mb-1">Drop Off Your Vehicle</h3>
-            <p class="text-gray-500 text-sm">Bring it in at the agreed time. We'll go over what's needed and give you a quote.</p>
-          </div>
-          <div class="reveal text-center">
-            <div class="w-12 h-12 rounded-full bg-[#E31E24] text-white text-xl font-bold flex items-center justify-center mx-auto mb-3">3</div>
-            <h3 class="font-semibold text-[#1A1A1A] mb-1">Pick It Up</h3>
-            <p class="text-gray-500 text-sm">We'll call you when it's ready. Drive away knowing the job's been done right.</p>
-          </div>
+          {howItWorks.steps.map((step) => (
+            <div class="reveal text-center">
+              <div class="w-12 h-12 rounded-full bg-[#E31E24] text-white text-xl font-bold flex items-center justify-center mx-auto mb-3">{step.number}</div>
+              <h3 class="font-semibold text-[#1A1A1A] mb-1">{step.title}</h3>
+              <p class="text-gray-500 text-sm">{step.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

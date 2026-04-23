@@ -190,3 +190,37 @@ collections:
               - { label: "Full Description", name: "body", widget: "text", hint: "Use a blank line between paragraphs" }
               - { label: "Button Text", name: "cta", widget: "string" }
               - { label: "NSW Authorised Badge", name: "highlight", widget: "boolean", default: false, hint: "Shows the red NSW Authorised badge" }
+
+  # ── Contact page ───────────────────────────────────────────────────────────────────────
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - name: "contact"
+        label: "Contact Page Content"
+        file: "src/content/contact.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }
+          - label: "How It Works"
+            name: "howItWorks"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Step Number", name: "number", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+          - label: "Booking Form"
+            name: "bookingForm"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub-text", name: "subtext", widget: "text" }

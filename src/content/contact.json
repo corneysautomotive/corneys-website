@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "tagline": "Get in Touch",
+    "heading": "Contact & Booking",
+    "subtext": "Give us a call, send us a message, or just come in. We're easy to deal with."
+  },
+  "howItWorks": {
+    "heading": "How It Works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Call or Message",
+        "desc": "Tell us what you need and we'll find a time that works for you."
+      },
+      {
+        "number": "2",
+        "title": "Drop Off Your Vehicle",
+        "desc": "Bring it in at the agreed time. We'll go over what's needed and give you a quote."
+      },
+      {
+        "number": "3",
+        "title": "Pick It Up",
+        "desc": "We'll call you when it's ready. Drive away knowing the job's been done right."
+      }
+    ]
+  },
+  "bookingForm": {
+    "heading": "Request a Booking",
+    "subtext": "Fill in your details and we'll confirm your booking via email as soon as possible."
+  }
+}
