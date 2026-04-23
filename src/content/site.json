@@ -1,18 +1,18 @@
 {
+  "facebook": "https://www.facebook.com/share/1btJH83eMS/?mibextid=wwXIfr",
+  "hoursSaturday": "Saturday: 8:30am – 11:00am",
   "businessName": "Corney's Automotive Services",
-  "tagline": "Taree's ARCtick-Licensed Workshop",
-  "phone": "(02) 6552 6131",
+  "abn": "72 659 468 550",
   "phoneTel": "0265526131",
+  "phone": "(02) 6552 6131",
+  "tagline": "Taree's Trusted Local Mechanic",
+  "hours": "Mon–Fri 8:30am–4:30pm, Sat 8:30am–11am",
+  "instagram": "https://www.instagram.com/corneysautomotiveservices?igsh=bngzOGRxYTY2OG0y",
+  "footerTagline": "ARCtick-licensed workshop. Logbook servicing, AC regas, pink slips, blue slips, defect clearances — one visit, all handled.",
   "address": "16 Albert Lane, Taree NSW 2430",
   "addressStreet": "16 Albert Lane",
-  "addressCity": "Taree NSW 2430",
-  "hours": "Mon–Fri 8:30am–4:30pm, Sat 8:30am–11am",
   "hoursWeekday": "Mon–Fri: 8:30am – 4:30pm",
-  "hoursSaturday": "Saturday: 8:30am – 11:00am",
   "hoursSunday": "Sunday: Closed",
-  "abn": "72 659 468 550",
-  "facebook": "https://www.facebook.com/share/1btJH83eMS/?mibextid=wwXIfr",
-  "instagram": "https://www.instagram.com/corneysautomotiveservices?igsh=bngzOGRxYTY2OG0y",
   "googleMapsUrl": "https://www.google.com/maps/search/Corney%27s+Automotive+Services+Taree",
-  "footerTagline": "Taree's ARCtick-licensed workshop. Logbook servicing, AC regas, pink slips, blue slips, defect clearances — one visit, all handled."
+  "addressCity": "Taree NSW 2430"
 }
