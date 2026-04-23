@@ -1,20 +1,17 @@
 {
   "hero": {
     "tagline": "Who We Are",
-    "heading": "A family workshop. Three mechanics. 20 years.",
-    "subtext": "Corney's is a family-run workshop in the heart of Taree. Jarrad, Don and Toby are the three people who will actually work on your car. That's the whole operation — and that's the point."
+    "heading": "About Corney's",
+    "subtext": "A workshop built on doing the job right and treating people fairly."
   },
   "story": {
-    "heading": "Taree's workshop, built on trust and done right.",
+    "heading": "Built on results",
     "paragraphs": [
-      "The workshop",
-      "Don Corney opened the doors in Taree more than 20 years ago. Jarrad grew up in the shop — passing tools, then using them, then running the place. Toby Carter's been on the spanners alongside us for years. Between the three of us we handle everything from logbook servicing on a new hatchback to blue slips on an interstate ute, AC regas to defect clearances, brakes to timing belts.",
-      "What you actually get",
-      "An honest quote before any work starts. A phone call if anything changes. Your car ready when we said it would be. An invoice that matches the quote. The job done properly the first time — and if it isn't, you bring it back and we fix it.",
-      "The credentials that matter",
+      "Corney's Automotive Services has been serving Taree and the Manning Valley for years. We're not a franchise. We're not a chain. We're a local family business — the kind where you deal with the people who actually work on your car, not a service counter that passes your keys to someone you've never met.",
+      "We work on all makes and models — from the family hatchback to the trade ute. We service vehicles the way we'd want our own cars serviced: properly, with quality parts, at a fair price, and with a straight explanation of what was done and why.",
       "We hold the full set of licences and authorisations you'd want from a workshop: ARCtick (automotive refrigerant), AUVIS (blue slip inspections), eSafety (pink slips), and authorised defect-clearance repairer. That means we can handle your servicing, your rego checks, your AC work, and your defect clearance all under the one roof.",
-      "Local, and staying that way",
-      "Most of our work comes from Taree families, tradespeople, fleets and farmers — people who've been coming to us for years and send their kids to us when they get their first car. That's the business. That's what we protect every day. Treat people fairly, do the work properly, and the rest looks after itself."
+      "If you've had bad experiences with mechanics who charge you for things you didn't need, give you your car back with the same problem still happening, or never call when they say they will — we get it. That's not how we work. We tell you what's wrong, give you a price upfront, call you if anything changes, and hand your keys back when we say we will.",
+      "We're proud to be part of the Taree community. Our customers are local families, tradespeople, businesses and farmers — people who've been coming to us for years and send their kids to us when they get their first car. That trust isn't something we take lightly. We do the work properly, and the rest looks after itself."
     ]
   },
   "values": {
@@ -22,18 +19,18 @@
     "items": [
       {
         "emoji": "💬",
-        "title": "Quote first, work second",
-        "desc": "Nothing gets done without a price you've approved. If we find something mid-job, we stop and call you."
+        "title": "Honest Communication ",
+        "desc": "We call before we do anything unexpected. You know what's happening to your car at every step."
       },
       {
         "emoji": "💰",
-        "title": "Priced to match the quote",
-        "desc": "The invoice you get is the quote you agreed to. If anything changes along the way, you hear from us before the work happens."
+        "title": "Price to match",
+        "desc": "Competitive rates, no hidden charges, and quality work without the mark-ups. If anything changes along the way, you hear from us before the work happens."
       },
       {
         "emoji": "🏁",
-        "title": "Ready when we said",
-        "desc": "We tell you when your car will be done, and it's done then. If something delays it, we call before it becomes your problem."
+        "title": "Done Right, On Time",
+        "desc": "Quality work, done properly, ready when we say it'll be ready. That's the standard we hold ourselves to."
       }
     ]
   }
