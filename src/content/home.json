@@ -1,10 +1,10 @@
 {
   "hero": {
-    "tagline": "Taree's local workshop \u2014 all makes, all models",
+    "tagline": "Taree's Trusted Local Mechanic",
     "headlineLine1": "Your car,",
-    "headlineEmphasis": "fixed properly.",
+    "headlineEmphasis": "Fixed properly.",
     "headlineLine2": "First time.",
-    "subtext": "Mechanical repairs, logbook servicing, pink and blue slips, AC regas \u2014 everything your car needs, at one address in Taree. We quote before we start, and we call if anything changes so you always know what you're paying.",
+    "subtext": "Mechanical repairs, logbook servicing, pink and blue slips, AC regas — all of it. We are upfront and call if anything changes. No surprises.",
     "badges": [
       "20+ years in Taree",
       "All makes & models",
@@ -23,7 +23,7 @@
     },
     {
       "value": "ARCtick",
-      "label": "Licensed"
+      "label": "Licensed "
     },
     {
       "value": "All Makes",
@@ -31,44 +31,44 @@
     }
   ],
   "aircon": {
-    "eyebrow": "ARCtick Licensed",
     "heading": "Automotive air conditioning, done properly.",
-    "subheading": "Corney's holds an ARCtick licence \u2014 the Australian authorisation to handle automotive refrigerant. If your AC isn't cold, bring it in. We'll diagnose it, fix it, and have you back in cool air.",
-    "price": "$189",
-    "priceLabel": "Fixed-price AC regas",
-    "priceSub": "Standard passenger vehicle \u00b7 All-inclusive \u00b7 Quoted up front",
-    "leakTestPrice": "from $88",
-    "leakTestLabel": "Leak test",
-    "leakTestSub": "If your system has lost gas, we find the leak first so the repair lasts \u2014 then regas once it's sealed.",
+    "subheading": "Corney's holds an ARCtick licence — the Australian authorisation to handle automotive refrigerant. If your AC isn't cold, bring it in. We'll diagnose it, fix it, and have you back in cool air.",
     "points": [
       "Licensed to handle all automotive refrigerants (R134a, R1234yf)",
-      "Proper recovery, evacuation and recharge \u2014 to manufacturer spec",
+      "Proper recovery, evacuation and recharge — to manufacturer spec",
       "Leak diagnosis with UV dye or nitrogen pressure test",
       "Full component repair (compressor, condenser, expansion valve)"
     ],
+    "price": "$189",
+    "eyebrow": "ARCtick Licensed",
+    "priceLabel": "Fixed-price AC regas",
+    "leakTestSub": "If your system has lost gas, we find the leak first so the repair lasts — then regas once it's sealed.",
+    "leakTestPrice": "from $88",
+    "priceSub": "Standard passenger vehicle · All-inclusive · Quoted up front",
     "ctaText": "Book an AC Service",
-    "ctaPhone": "Or call (02) 6552 6131"
+    "ctaPhone": "Or call (02) 6552 6131",
+    "leakTestLabel": "Leak test"
   },
   "whyUs": {
     "tagline": "Why Corney's",
-    "heading": "Workshop work done the right way \u2014 every single time.",
-    "subtext": "Four reasons Taree drivers have kept coming back for 20 years.",
+    "heading": "Trusted work done the right way",
+    "subtext": "Four reasons drivers have kept coming back for 20+ years.",
     "points": [
       {
-        "title": "A Quote Before We Lift a Spanner",
-        "desc": "We diagnose, we call, we quote. Then you decide. The invoice matches the quote you approved \u2014 always."
+        "title": "Fair pricing. Quality work. ",
+        "desc": "Good mechanics shouldn't cost a fortune. We keep our rates honest, our parts reliable, and our work thorough — because shortcuts cost you more in the long run."
       },
       {
-        "title": "Licensed Across the Board",
-        "desc": "ARCtick for AC work. AUVIS for blue slips. NSW authorised for pink slips and defect clearances. Everything your car needs, under one roof."
+        "title": "Licensed and Trained",
+        "desc": "Every job is handled by trained, licensed technicians who take pride in doing it properly. Certified across every area of work — ARCtick for AC, AUVIS for blue slips, NSW authorised for pink slips and defect clearances. "
       },
       {
         "title": "Warranty-Safe Logbook Servicing",
-        "desc": "Serviced to manufacturer specs, stamped by the book, recorded properly. Your new-car warranty stays exactly where it should."
+        "desc": "Dealer-quality servicing, without the dealership prices. We service to manufacturer specifications and stamp your logbook correctly — so your new-car warranty stays fully intact."
       },
       {
         "title": "The Mechanics Work on Your Car",
-        "desc": "Jarrad, Don and Toby \u2014 the three names on the shop wall \u2014 are the three people holding the spanners. You speak to the mechanic doing the job."
+        "desc": "Jarrad, Don and Toby — the three names on the shop wall — are the three people holding the spanners. You call, you speak to the mechanic. They know your car, they explain what they found, and they talk to you like a person — not a job number."
       }
     ]
   },
@@ -80,23 +80,23 @@
       {
         "number": "01",
         "title": "Book It In",
-        "desc": "Call (02) 6552 6131, send a message, or drop by. We'll lock in a time that suits \u2014 usually same week, often sooner."
+        "desc": "Book online, call us on (02) 6552 6131, or send a message. We'll lock in a time that suits — usually same week, often sooner."
       },
       {
         "number": "02",
-        "title": "We Diagnose & Quote",
-        "desc": "Drop your car at 16 Albert Lane. We check it over, call you with a clear quote before starting, and only do what you've approved."
+        "title": "We Diagnose & Complete the job",
+        "desc": "Drop your car.  We assess the work, keep you across what's happening, and have it ready when we say we will. No loose ends."
       },
       {
         "number": "03",
         "title": "Keys Back, Job Done",
-        "desc": "We message when it's ready. Clear rundown of what was done, why, and what the bill was \u2014 matching the quote."
+        "desc": "We message when it's ready. Clear rundown of what was done, and why. Your back on the road sooner."
       }
     ]
   },
   "testimonials": {
     "tagline": "Customer Reviews",
-    "heading": "What Taree drivers say.",
+    "heading": "What Customers say.",
     "subtext": "Five stars on Google. Here's why.",
     "reviews": [
       {
@@ -104,7 +104,7 @@
         "location": "Taree",
         "vehicle": "2018 Toyota Corolla",
         "stars": 5,
-        "text": "Booked in for a logbook service, they called before doing anything extra \u2014 found a cracked rear shock but gave me the option. Done by 4pm, quote matched the bill to the dollar. That's exactly how it should be."
+        "text": "Booked in for a logbook service, they called before doing anything extra — found a cracked rear shock but gave me the option. Done by 4pm, quote matched the bill to the dollar. That's exactly how it should be."
       },
       {
         "name": "Dave R.",
@@ -118,14 +118,14 @@
         "location": "Old Bar",
         "vehicle": "2019 Mazda CX-5",
         "stars": 5,
-        "text": "AC had been weak for ages. Corney's did a proper leak test, found a bad O-ring on the condenser, fixed it and regassed. Ice cold since. $189 regas plus the repair \u2014 quoted up front, exactly as promised."
+        "text": "AC had been weak for ages. Corney's did a proper leak test, found a bad O-ring on the condenser, fixed it and regassed. Ice cold since. $189 regas plus the repair — quoted up front, exactly as promised."
       },
       {
         "name": "Tom K.",
         "location": "Wingham",
         "vehicle": "2016 Holden Colorado",
         "stars": 5,
-        "text": "Pink slip done in under an hour. They flagged a CV boot starting to split \u2014 not a fail, but warned me before it became one. That's the kind of heads-up you get from mechanics who care about doing the job right."
+        "text": "Pink slip done in under an hour. They flagged a CV boot starting to split — not a fail, but warned me before it became one. That's the kind of heads-up you get from mechanics who care about doing the job right."
       },
       {
         "name": "Karen B.",
