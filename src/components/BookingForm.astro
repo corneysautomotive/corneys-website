@@ -178,14 +178,10 @@ form?.addEventListener('submit', async (e) => {
   };
 
   try {
-    const res = await fetch('/api/booking', {
+    const res = await fetch('https://corneys-quote-relay.corneysautomotive.workers.dev/submit-booking', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        action: 'create_flow',
-        goal: `New booking request from ${payload.name} — ${payload.vehicle_make} ${payload.vehicle_model} — ${payload.preferred_date} — Phone: ${payload.phone} — Email: ${payload.email} — Rego: ${payload.rego} ${payload.rego_state} — Work: ${payload.work_required}`,
-        status: 'queued'
-      })
+      body: JSON.stringify(payload)
     });
     
     if (res.ok) {
