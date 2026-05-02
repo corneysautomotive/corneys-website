@@ -5,16 +5,19 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
 }
 
 const {
   title,
   description = "Corney's Automotive Services — trusted mechanic in Taree NSW. Logbook servicing, brakes, air conditioning, blue slips, pink slips, defect clearances and more. Call (02) 6552 6131.",
-  canonical
+  canonical,
+  ogImage = '/logos/Corneys%20Automotive%20Services%20Colour%20on%20White.jpg',
 } = Astro.props;
 
 const siteUrl = 'https://corneysautomotive.com';
 const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.pathname;
+const ogImageUrl = `${siteUrl}${ogImage}`;
 ---
 
 <!doctype html>
@@ -32,6 +35,15 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:locale" content="en_AU" />
+    <meta property="og:site_name" content="Corney's Automotive Services" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content="Corney's Automotive Services — Taree NSW" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
