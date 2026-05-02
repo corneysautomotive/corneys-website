@@ -2,6 +2,7 @@
 interface Props {
   heading?: string;
   subtext?: string;
+  showMap?: boolean;
 }
 const {
   heading = "Ready to Book Your Service?",
@@ -63,5 +64,19 @@ const {
       <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       16 Albert Lane, Taree NSW 2430 &nbsp;·&nbsp; Mon–Fri 8:30am–4:30pm · Sat 8:30am–11am
     </p>
+
+    <!-- Google Map embed -->
+    {Astro.props.showMap && <div class="mt-8 reveal w-full max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl" style="height:280px;">
+      <iframe
+        title="Corney's Automotive Services location"
+        src="https://maps.google.com/maps?q=16+Albert+Lane+Taree+NSW+2430&output=embed&z=16"
+        width="100%"
+        height="280"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>}
   </div>
 </section>

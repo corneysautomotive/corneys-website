@@ -13,7 +13,7 @@ const {
   canonical
 } = Astro.props;
 
-const siteUrl = 'https://corneysautomotive.com.au';
+const siteUrl = 'https://corneysautomotive.com';
 const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.pathname;
 ---
 
@@ -42,13 +42,15 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- LocalBusiness Schema -->
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AutoRepair",
         "name": "Corney's Automotive Services",
-        "image": "https://corneysautomotive.com.au/logos/Corneys%20Automotive%20Services%20Colour%20on%20White.jpg",
-        "url": "https://corneysautomotive.com.au",
+        "description": "ARCtick-licensed mechanic in Taree NSW. Logbook servicing, pink slips, blue slips, AC regas, brakes, diagnostics and full mechanical repairs. 20+ years local experience. Call (02) 6552 6131.",
+        "image": "https://corneysautomotive.com/logos/Corneys%20Automotive%20Services%20Colour%20on%20White.jpg",
+        "url": "https://corneysautomotive.com",
         "telephone": "+61265526131",
         "address": {
           "@type": "PostalAddress",
@@ -78,12 +80,13 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl + Astro.url.
           }
         ],
         "priceRange": "$$",
-        "servesCuisine": null,
         "areaServed": {
           "@type": "City",
           "name": "Taree"
         },
-        "sameAs": []
+        "sameAs": [
+          "https://www.facebook.com/share/1CgaJAv925/"
+        ]
       }
     </script>
 

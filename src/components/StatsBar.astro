@@ -22,9 +22,19 @@ const statsIcons = [
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-x divide-[#2A2A2A]">
       {homeContent.stats.map((stat, i) => (
         <div class="stats-item flex flex-col items-center gap-2 py-6 px-4 text-center group hover:bg-[#1E1E1E] transition-colors">
-          <div class="text-[#E31E24] opacity-70 group-hover:opacity-100 transition-opacity" set:html={statsIcons[i]} />
+          {stat.value === 'ARCtick' ? (
+            <img
+              src="/logos/arctick-logo.png"
+              alt="ARCtick Licensed"
+              style="height: 50px; width: auto; object-fit: contain; opacity: 0.9;"
+            />
+          ) : (
+            <div class="text-[#E31E24] opacity-70 group-hover:opacity-100 transition-opacity" set:html={statsIcons[i]} />
+          )}
           <div>
-            <div class="font-display font-bold text-white text-xl sm:text-2xl leading-none">{stat.value}</div>
+            {stat.value !== 'ARCtick' && (
+              <div class="font-display font-bold text-white text-xl sm:text-2xl leading-none">{stat.value}</div>
+            )}
             <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider">{stat.label}</div>
           </div>
         </div>
