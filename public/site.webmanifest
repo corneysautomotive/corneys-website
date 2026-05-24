@@ -1,0 +1,11 @@
+{
+  "name": "Corney's Automotive Services",
+  "short_name": "Corney's",
+  "icons": [
+    { "src": "/icons/corneys-app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/corneys-app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "theme_color": "#111111",
+  "background_color": "#111111",
+  "display": "standalone"
+}
